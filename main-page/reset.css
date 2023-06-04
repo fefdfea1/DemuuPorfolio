@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+
+* { margin: 0; 
+    padding: 0;
+    text-decoration: none;
+    color: #000;
+    border: 0;
+}
+
+h1,h2,h3,h4,h5 {font-family: 'Black Han Sans', sans-serif;}
+p,a,div,span {font-family: 'NanumSquare';}
+ul {list-style: none;}
+
+.container {width: 1320px; margin: 0 auto;}
+
+
+@media (max-width: 1400px) {
+    .container {width: 1140px;}
+}
+
+@media (max-width: 1200px) {
+    .container {width: 960px;}
+}
+
+@media (max-width: 992px) {
+    .container {width: 720px;}
+}
+
+@media (max-width: 768px) {
+    .container {width: 540px;}
+}
+
+@media (max-width: 576px) {
+    .container {width: 100%;}
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+    overflow: hidden;
+  }
