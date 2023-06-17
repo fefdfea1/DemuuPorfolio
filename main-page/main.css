@@ -1,46 +1,4 @@
-@import url("./reset.css");
-
-#header {
-    position: relative;
-}
-.header-container {
-    margin-top: 20px;
-    overflow: hidden;
-}
-
-.header-logo {
-    display: inline-block;
-    margin-left: 35px;
-}
-.header-logo img {
-    width: 120px;
-}
-
-.header-menu {
-    display: block;
-    float: right;
-}
-.header-menu ul {
-    overflow: hidden;
-    margin-right: 35px;
-    list-style: none;
-}
-.header-menu li {
-    float: left;
-    list-style: none;
-    display: list-item;
-    line-height: 3.25;
-}
-.header-menu li a {
-    margin: 0 20px;
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    color: #757575;
-}
-.header-menu li a:hover {
-    color: #000;
-}
+@import url("../common/reset.css");
 
 /* ------------- banner animation ----------- */
 #slide-section {
@@ -49,7 +7,7 @@
 
 .container {
   height: calc(100vh - 220px);
-  margin-top: 50px;
+  padding-top: 100px;
   overflow: hidden;
 }
 
@@ -216,4 +174,29 @@
   font-size: 20px;
   transition: all .5s;
   font-weight: 900;
+}
+
+
+.project-since-bars {
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translate(0, -75%);
+}
+.since-item2 {
+  width: 70px;
+  padding: 20px 0;
+}
+.item-bar2 {
+  transition: all .5s;
+  width: 20px;
+  height: 2px;
+  background-color: #757575;
+  flex-shrink: 0;
+  float: right;
+}
+.item-bar2-active {
+  width: 50px;
+  height: 3px;
+  background-color: #212121;
 }

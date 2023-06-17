@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url("https://fonts.googleapis.com/css?family=Syncopate");
 
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -133,17 +133,6 @@ table {
   border-spacing: 0;
 }
 
-.clearfix:before,
-.clearfix:after {
-  display: block;
-  content: "";
-  line-height: 0;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
 img {
   width: 100%;
   height: 100%;
@@ -161,11 +150,35 @@ a {
   text-decoration: none;
   color: #000;
 }
-h1,h2,h3,h4,h5 {font-family: 'Black Han Sans', sans-serif;}
-p,a,div,span {font-family: 'NanumSquare';}
+h1,h2,h3,h4 {font-family: 'Secular One', sans-serif;}
+p,a,div,span,h5 {font-family: 'NanumSquare';}
 ul {list-style: none;}
 
+
+.clearfix:before,
+.clearfix:after {
+  display: block;
+  content: "";
+  line-height: 0;
+}
+
+.clearfix:after {
+  clear: both;
+}
 .break-container {width: 1320px; margin: 0 auto;}
+
+body::-webkit-scrollbar {
+  width: 16px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #616161;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+}
+body::-webkit-scrollbar-track {
+  background-color: #fff;
+}
 
 
 @media (max-width: 1400px) {
@@ -187,3 +200,89 @@ ul {list-style: none;}
 @media (max-width: 576px) {
     .break-container {width: 100%;}
 }
+
+/* ------------------ header ----------------- */
+#header {
+  position: absolute;
+  width: 100vw;
+}
+.header-container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.header-logo {
+  display: inline-block;
+  margin-left: 35px;
+}
+.header-logo img {
+  width: 120px;
+}
+
+.header-menu {
+  display: block;
+  float: right;
+}
+.header-menu ul {
+  overflow: hidden;
+  margin-right: 35px;
+  list-style: none;
+}
+.header-menu li {
+  float: left;
+  display: list-item;
+  line-height: 3.25;
+}
+.header-menu li a {
+  margin: 0 20px;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #757575;
+}
+.header-menu li a:hover {
+  color: #000;
+}
+
+
+/* -------------------loading-screen------------------- */
+.loading-screen {
+  font-family: 'Syncopate', sans-serif;
+  position: fixed;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  font-size: 4em;
+  letter-spacing: 6px;
+  color: #fff;
+  text-align: center;
+  transition: all .6s;
+  opacity: 1;
+  z-index: 10;
+}
+
+.loading-screen div {
+  display: inline-block;
+  line-height: 95vh;
+}
+
+.loading-screen div {
+  transition: all .5s;
+  transform: translateY(-100%);
+}
+
+
+/* -------------- footer ---------- */
+.footer-bx {
+  width: 100vw; 
+  height: 80px;
+  background-color: #212121;
+  color: #fff;
+}
+
+.copyright {
+  color: #fff;
+  text-align: center;
+  padding-top: 18px;
+}
+.copyright a {color: #fff;}

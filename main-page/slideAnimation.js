@@ -1,11 +1,11 @@
 import { changeTextAnimation } from "./TextAnimation.js";
-import { sinceActive, removeSinceActive } from "./since-active.js";
+import { sinceActive } from "./since-active.js";
 
 const carouselUl = document.querySelector(".carosel");
 const innerWidth = window.innerWidth;
 const transionTime = 1;
 //가장 처음 이미지가 줄어드는 시간을 조절하는 변수 현재 3초
-const firstImageScaleDownTiming = 3 * 1000;
+const firstImageScaleDownTiming = 3000;
 //1000은 transition이 끝나자 마자 scaleUp시작
 let scaleUpTiming = transionTime * 1200;
 //스케일 up이 끝나고 다시 줄어들 타이밍 1000은 1초 뒤
@@ -48,6 +48,7 @@ const firstSlideInit = () => {
   changeTextAnimation(0);
   setTimeout(() => {
     Slide.classList.remove("widthUp");
+    sinceActive(currentSlide, transionTime);
   }, firstImageScaleDownTiming);
 };
 
@@ -70,23 +71,21 @@ const fistSlideDownAni = () => {
   setTimeout(() => {
     Slide.style.transition = `${transionTime}s`;
     Slide.classList.remove("widthUp");
-  }, scaleDownTiming - (scaleUpTiming + (transionTime * 1000)));
+  }, scaleDownTiming - (scaleUpTiming + transionTime * 1000));
 };
 
 const imageSlide = () => {
-  removeSinceActive(currentSlide, scaleDownTiming);
-  carouselUl.style.transition = `${transionTime}s`;
+  sinceActive(currentSlide, transionTime);
   changeTextAnimation(currentSlide);
-  sinceActive(currentSlide);
+  carouselUl.style.transition = `${transionTime}s`;
   currentSlide++;
 
   let moveX = currentSlide * innerWidth;
   carouselUl.style.transform = `translateX(-${moveX}px)`;
   imageScaleUp(currentSlide);
   imageScaleDown(currentSlide);
-  
+
   if (currentSlide === currentItemLength - 1) {
-    
     imageScaleUp(currentSlide);
     imageScaleUp(1);
     clearInterval(timeId);
@@ -101,9 +100,9 @@ const imageSlide = () => {
       moveX = currentSlide * innerWidth;
       carouselUl.style.transform = `translateX(-${moveX}px)`;
       fistSlideDownAni();
-      sinceActive(currentSlide);
-      
+
       setTimeout(() => {
+        sinceActive(currentSlide, transionTime);
         changeTextAnimation(currentSlide);
         currentSlide++;
         moveX = currentSlide * innerWidth;
@@ -112,7 +111,6 @@ const imageSlide = () => {
         imageScaleUp(currentSlide);
         imageScaleDown(currentSlide);
         autoPlay(timer);
-
       }, timer - (transionTime * 1000 + scaleUpTiming));
     }, setTimeOutTime);
   }
