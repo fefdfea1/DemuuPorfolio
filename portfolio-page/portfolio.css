@@ -43,7 +43,7 @@ body {
   padding-top: 20px;
 }
 .introduce-txt p {
-  font-size: 18px;
+  font-size: 16px;
   padding: 8px 0;
   transform: rotate(0.02deg);
 }
@@ -59,7 +59,7 @@ body {
 .ex-title-bx {
   display: flex;
   flex-direction: column;
-  width: 55%;
+  width: 54%;
 }
 
 .experience-title {margin-left: 5%;}
@@ -76,12 +76,15 @@ body {
 
 
 .experience-menu {margin-top: 80px; margin-left: 5%;}
-.experience-menu p {padding: 5px 0;}
-.experience-menu p:nth-child(2) {
+.experience-menu a:nth-child(2) {
   display: flex;
   align-items: center;
+  margin-top: 15px;
 }
-.experience-menu a:hover {text-decoration: underline;}
+.experience-menu a:hover p {
+  text-decoration: underline;
+}
+.experience-menu p {display: inline-block;}
 .experience-menu img {
   width: 20px;
   padding-right: 5px;
@@ -313,15 +316,43 @@ body {
   }
 
   /* ----- section3 ----- */
+  .experience {
+    display: block;
+    margin-left: 10%;
+  }
   .ex-title-bx {
-    width: 45%;
-    padding-left: 12px;
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
   }
-  .experience-title a {
-    font-size: 18px;
+  .experience-title {
+    display: inline-block;
   }
-  .experience-content h5 {
-    font-size: 14px;
+  .experience-menu {
+    display: inline-block;
+    margin: 0;
+    margin-left: 10%;
+    vertical-align: top;
+    padding-top: 16px;
+  }
+  .experience-menu a {
+    display: inline-block;
+  }
+  .experience-menu i {
+    font-size: 20px;
+    padding-right: 13px;
+  }
+  .experience-menu img {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 20px;
+  }
+  .experience-menu a:nth-child(2) {
+    margin-top: 0;
+    display: inline-block;
+  }
+  .experience-menu p {
+    display: none;
   }
 
   /* ----- section4 ----- */
