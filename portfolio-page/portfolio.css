@@ -4,6 +4,7 @@ body {
   overflow-x: hidden
 }
 
+/* ----- section1 ----- */
 #my-introduce {
   padding-top: 200px;
   padding-bottom: 40px;
@@ -30,8 +31,7 @@ body {
   color: #616161;
 }
 
-
-
+/* ----- section2 ----- */
 #portfolio-introduce h1 {
   font-size: 30px;
   padding-top: 80px;
@@ -39,7 +39,6 @@ body {
   border-bottom: solid 2px rgba(0, 0, 0, .2);
   transform: rotate(0.03deg);
 }
-
 .introduce-txt {
   padding-top: 20px;
 }
@@ -49,14 +48,14 @@ body {
   transform: rotate(0.02deg);
 }
 
+
+/* ----- section3 ----- */
 .experience {
   display: flex;
   width: 80%;
   padding: 50px 0;
   margin: 0 auto;
 }
-
-
 .ex-title-bx {
   display: flex;
   flex-direction: column;
@@ -90,7 +89,7 @@ body {
 }
 
 .experience-content {margin-left: 5%;}
-.experience-content p:nth-child(1) {
+.experience-content h5{
   font-size: 20px;
   font-weight: 600;
   transform: rotate(0.02deg);
@@ -100,6 +99,8 @@ body {
   padding: 10px 0;
 }
 
+
+/* ----- section4 ----- */
 .my-skills {
   height: 550px;
 }
@@ -128,4 +129,206 @@ body {
 .skill-bx2 div {
   padding-left: 20%;
   width: 50%;
+}
+
+
+@media (max-width: 1200px) {
+  /* ----- section1 ----- */
+  .myName {
+    font-size: 30px;
+  }
+  
+  .introduce-menu {
+    font-size: 16px;
+  }
+  
+  .introduce-menu td {
+    padding: 12px 35px 0 35px;
+  }
+
+  /* ----- section2 ----- */
+  #portfolio-introduce h1 {
+    font-size: 28px;
+  }
+  .introduce-txt p {
+    font-size: 16px;
+  }
+
+  /* ----- section3 ----- */
+  .experience {
+    width: 100%;
+  }
+
+  .experience-title {margin-left: 0;}
+
+  .experience-menu {margin-left: 0;}
+
+  .experience-content {margin-left: 0;}
+
+}
+
+
+@media (max-width: 992px) {
+  /* ----- section2 ----- */
+  #portfolio-introduce h1 {
+    font-size: 26px;
+  }
+  .introduce-txt p {
+    font-size: 14px;
+  }
+
+  /* ----- section3 ----- */
+  .ex-title-bx {
+    width: 55%;
+  }
+  .experience-title a {
+    font-size: 22px;
+  }
+  .experience-title span {
+    font-size: 14px;
+  }
+  .experience-title p {
+    font-size: 14px;
+  }
+  .experience-menu a {
+    font-size: 14px;
+  }
+  .experience-menu img {
+    width: 16px;
+  }
+  .experience-content h5 {
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
+  .experience-content p {
+    font-size: 14px;
+  }
+  .experience-content span {
+    display: none;
+  }
+
+  /* ----- section4 ----- */
+.my-skills {
+  height: 500px;
+}
+.my-skills p {
+  font-size: 14px;
+}
+.my-skills h5 {
+  font-size: 18px;
+  padding-bottom: 18px;
+}
+.skill-bx1 div {
+  padding-left: 15%;
+}
+.skill-bx2 {
+  padding-top: 30px;
+}
+.skill-bx2 div {
+  padding-left: 15%;
+}
+}
+
+
+@media (max-width: 768px) {
+  /* ----- section1 ----- */
+  #my-introduce {
+    padding-top: 160px;
+    padding-bottom: 20px;
+  }
+  
+    .myName {
+    font-size: 26px;
+  }
+  
+  .introduce-menu {
+    font-size: 12px;
+  }
+  
+  .introduce-menu td {
+    padding: 10px 25px 0 25px;
+  }
+
+  /* ----- section2 ----- */
+  #portfolio-introduce h1 {
+    font-size: 24px;
+  }
+  .introduce-txt p {
+    font-size: 12px;
+  }
+
+  /* ----- section3 ----- */
+  .ex-title-bx {
+    width: 50%;
+  }
+  .experience-title a {
+    font-size: 20px;
+  }
+  .experience-title span {
+    font-size: 12px;
+  }
+  .experience-title p {
+    font-size: 12px;
+  }
+  .experience-menu a {
+    font-size: 12px;
+  }
+  .experience-menu img {
+    width: 14px;
+  }
+  .experience-content h5 {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .experience-content p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  #portfolio-introduce h1 {
+    padding-left: 12px;
+  }
+  /* ----- section1 ----- */
+  #my-introduce {
+    padding-top: 140px;
+    padding-bottom: 10px;
+  }
+  .myName {
+    font-size: 22px;
+  }
+  .introduce-menu {
+    font-size: 12px;
+  }
+  .introduce-menu td {
+    padding: 5px 15px 0 15px;
+  }
+
+  /* ----- section2 ----- */
+  #portfolio-introduce h1 {
+    font-size: 22px;
+  }
+  .introduce-txt {
+    padding: 0 10px;
+  }
+
+  /* ----- section3 ----- */
+  .ex-title-bx {
+    width: 45%;
+    padding-left: 12px;
+  }
+  .experience-title a {
+    font-size: 18px;
+  }
+  .experience-content h5 {
+    font-size: 14px;
+  }
+
+  /* ----- section4 ----- */
+  .my-skills p {
+    font-size: 12px;
+  }
+  .my-skills h5 {
+    font-size: 16px;
+  }
 }
