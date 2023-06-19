@@ -1,4 +1,5 @@
 function loadingTxt() {
+  document.querySelector("body").style.overflowY = "hidden";
   const loadingTxtNth = document.querySelectorAll(".loading-screen div");
   const loadingTxtLength = document.querySelectorAll(".loading-screen div").length;
 
@@ -13,8 +14,11 @@ function loadingTxt() {
       setTimeout(() => {
         document.querySelector(".loading-screen").style.display = "none";
       }, 1000)
+      document.querySelector("body").style.overflowY = "";
     },2000)
   }
 }
 
-loadingTxt();
+export const loadingScreen = () => {
+  loadingTxt();
+};

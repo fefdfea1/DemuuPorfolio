@@ -165,7 +165,6 @@ ul {list-style: none;}
 .clearfix:after {
   clear: both;
 }
-.break-container {width: 1320px; margin: 0 auto;}
 
 body::-webkit-scrollbar {
   width: 16px;
@@ -178,27 +177,6 @@ body::-webkit-scrollbar-thumb {
 }
 body::-webkit-scrollbar-track {
   background-color: #fff;
-}
-
-
-@media (max-width: 1400px) {
-    .break-container {width: 1140px;}
-}
-
-@media (max-width: 1200px) {
-    .break-container {width: 960px;}
-}
-
-@media (max-width: 992px) {
-    .break-container {width: 720px;}
-}
-
-@media (max-width: 768px) {
-    .break-container {width: 540px;}
-}
-
-@media (max-width: 576px) {
-    .break-container {width: 100%;}
 }
 
 /* ------------------ header ----------------- */
@@ -244,6 +222,26 @@ body::-webkit-scrollbar-track {
   color: #000;
 }
 
+.header-menu2 {
+  display: none;
+}
+.header-menu2 i {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.menu2-bx {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  border: solid 5px #000;
+  z-index: 10;
+}
+
 
 /* -------------------loading-screen------------------- */
 .loading-screen {
@@ -286,3 +284,69 @@ body::-webkit-scrollbar-track {
   padding-top: 18px;
 }
 .copyright a {color: #fff;}
+
+
+
+.break-container {width: 1320px; margin: 0 auto;}
+
+@media (max-width: 1400px) {
+  .break-container {width: 1140px;}
+}
+
+@media (max-width: 1200px) {
+  .break-container {width: 960px;}
+
+  /* ----- header ----- */
+  .header-logo img {
+    width: 100px;
+  }
+  .header-menu li a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .break-container {width: 720px;}
+
+  /* ----- header ----- */
+  .header-logo {
+    margin-left: 30px;
+  }
+  .header-logo img {
+    width: 90px;
+  }
+  .header-menu ul {
+    margin-right: 30px;
+  }
+  .header-menu li a {
+    margin: 0 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .break-container {width: 540px;}
+
+  /* ----- header ----- */
+  .header-container {
+    margin-top: 18px;
+  }
+  .header-logo img {
+    width: 80px;
+  }
+  .header-menu li a {
+    margin: 0 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .break-container {width: 100%;}
+
+  /* ----- header ----- */
+  .header-menu {
+    display: none;
+  }
+  .header-menu2 {
+    display: block;
+  }
+}
