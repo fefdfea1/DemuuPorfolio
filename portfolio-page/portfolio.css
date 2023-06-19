@@ -18,15 +18,25 @@ body {
 }
 
 .introduce-menu {
-  margin: 0 auto;
   margin-top: 100px;
   font-size: 18px;
   font-weight: 600;
+  text-align: center;
 }
 
-.introduce-menu td {
-  padding: 15px 40px 0 40px;
+.menu-upper, .menu-lower {
+  display: inline-block;
 }
+
+.email, .phone, .github, .blog {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.introduce-menu div p {
+  padding: 5px 0;
+}
+
 .introduce-menu a:hover {
   color: #616161;
 }
@@ -144,10 +154,7 @@ body {
   .introduce-menu {
     font-size: 16px;
   }
-  
-  .introduce-menu td {
-    padding: 12px 35px 0 35px;
-  }
+
 
   /* ----- section2 ----- */
   #portfolio-introduce h1 {
@@ -172,6 +179,22 @@ body {
 
 
 @media (max-width: 992px) {
+  /* ----- section1 ----- */
+  #my-introduce {
+    padding-top: 180px;
+    padding-bottom: 30px;
+  }
+  .myName {
+    font-size: 28px;
+  }
+  .introduce-menu {
+    font-size: 14px;
+  }
+
+  .email, .phone, .github, .blog {
+    padding: 0 16px;
+  }
+
   /* ----- section2 ----- */
   #portfolio-introduce h1 {
     font-size: 26px;
@@ -243,13 +266,12 @@ body {
     .myName {
     font-size: 26px;
   }
-  
   .introduce-menu {
+    margin-top: 65px;
     font-size: 12px;
   }
-  
-  .introduce-menu td {
-    padding: 10px 25px 0 25px;
+  .email, .phone, .github, .blog {
+    padding: 0 14px;
   }
 
   /* ----- section2 ----- */
@@ -298,21 +320,32 @@ body {
     padding-bottom: 10px;
   }
   .myName {
-    font-size: 22px;
+    font-size: 20px;
   }
   .introduce-menu {
     font-size: 12px;
   }
-  .introduce-menu td {
-    padding: 5px 15px 0 15px;
+  .menu-upper, .menu-lower {
+    display: block;
+    width: 100%;
   }
+  .menu-upper div {
+    width: 40%;
+  }
+  .menu-lower {
+    padding-top: 22px;
+  }
+  .menu-lower div {
+    width: 40%;
+  }
+
 
   /* ----- section2 ----- */
   #portfolio-introduce h1 {
     font-size: 22px;
   }
-  .introduce-txt {
-    padding: 0 10px;
+  .introduce-txt p {
+    padding-left: 2%;
   }
 
   /* ----- section3 ----- */
