@@ -42,12 +42,17 @@ body {
 }
 
 /* ----- section2 ----- */
+#portfolio-introduce {
+  position: relative;
+  z-index: -1;
+}
 #portfolio-introduce h1 {
   font-size: 30px;
   padding-top: 80px;
   padding-bottom: 10px;
   border-bottom: solid 2px rgba(0, 0, 0, .2);
   transform: rotate(0.03deg);
+  
 }
 .introduce-txt {
   padding-top: 20px;

@@ -10,19 +10,11 @@ document.querySelector('div.burger').addEventListener(click, function() {
   }
 });
 
-const menuLinks = document.querySelectorAll('div.menu ul li a');
-menuLinks.forEach(function(link) {
-  link.addEventListener(click, function(e) {
-    e.preventDefault();
-    closeMenu();
-  });
-});
-
 function openMenu() {
   const circle = document.querySelector('div.circle');
   const burger = document.querySelector('div.burger');
   const elements = document.querySelectorAll('div.x, div.y, div.z');
-  const menuItems = document.querySelectorAll('.menu li');
+  const menuItems = document.querySelectorAll('.menu2-menus li');
 
   circle.classList.add('expand');
   burger.classList.add('open');
@@ -50,7 +42,7 @@ function closeMenu() {
   const x = document.querySelector('div.x');
   const z = document.querySelector('div.z');
   const circle = document.querySelector('div.circle');
-  const menuItems = document.querySelectorAll('.menu li');
+  const menuItems = document.querySelectorAll('.menu2-menus li');
 
   burger.classList.remove('open');
   x.classList.remove('rotate45');

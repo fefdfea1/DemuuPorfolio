@@ -1,8 +1,10 @@
 @import url("../common/reset.css");
 
 /* ------------- banner animation ----------- */
+
 #slide-section {
-  position: relative
+  position: relative;
+  z-index: -1;
 }
 
 .container {
