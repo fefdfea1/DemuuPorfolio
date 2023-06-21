@@ -316,6 +316,9 @@ body {
 }
 
 @media (max-width: 576px) {
+  body {
+    overflow: hidden;
+  }
   #portfolio-introduce h1 {
     padding-left: 12px;
   }
@@ -349,10 +352,11 @@ body {
   #portfolio-introduce h1 {
     font-size: 22px;
   }
+
   .introduce-txt p {
     padding-left: 2%;
+    padding-right: 2%;
   }
-
   /* ----- section3 ----- */
   .experience {
     display: block;
