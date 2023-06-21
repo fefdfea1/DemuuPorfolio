@@ -317,7 +317,7 @@ body {
 
 @media (max-width: 576px) {
   body {
-    overflow: hidden;
+    overflow-x: hidden;
   }
   #portfolio-introduce h1 {
     padding-left: 12px;
