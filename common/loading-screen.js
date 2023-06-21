@@ -1,7 +1,10 @@
 function loadingTxt() {
-  document.querySelector("body").style.overflowY = "hidden";
+  const body = document.querySelector("body");
   const loadingTxtNth = document.querySelectorAll(".loading-screen div");
   const loadingTxtLength = document.querySelectorAll(".loading-screen div").length;
+
+  body.style.overflowY = "hidden";
+  body.style.touchAction = "none";
 
   for (let i = 0; i < loadingTxtLength; i++) {
     setTimeout(() => {
@@ -14,7 +17,8 @@ function loadingTxt() {
       setTimeout(() => {
         document.querySelector(".loading-screen").style.display = "none";
       }, 1000)
-      document.querySelector("body").style.overflowY = "";
+      body.style.overflowY = "";
+      body.style.touchAction = "auto";
     },2000)
   }
 }

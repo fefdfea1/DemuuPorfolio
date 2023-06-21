@@ -536,6 +536,11 @@ div.rotate135 {
   .header-menu li a {
     font-size: 14px;
   }
+
+  /* ----- loading-screen ----- */
+  .loading-screen {
+    font-size: 3.5em;
+  }
 }
 
 @media (max-width: 992px) {
@@ -555,9 +560,14 @@ div.rotate135 {
   .header-menu ul {
     margin-right: 30px;
   }
-
   .header-menu li a {
     margin: 0 18px;
+  }
+
+  /* ----- loading-screen ----- */
+  .loading-screen {
+    font-size: 3em;
+    letter-spacing: 5px;
   }
 }
 
@@ -579,6 +589,12 @@ div.rotate135 {
     margin: 0 16px;
     font-size: 12px;
   }
+
+  /* ----- loading-screen ----- */
+  .loading-screen {
+    font-size: 2.5em;
+    letter-spacing: 4px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -593,5 +609,11 @@ div.rotate135 {
 
   .header-menu2 {
     display: block;
+  }
+
+  /* ----- loading-screen ----- */
+  .loading-screen {
+    font-size: 1.5em;
+    letter-spacing: 3px;
   }
 }

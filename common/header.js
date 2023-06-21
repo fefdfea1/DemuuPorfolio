@@ -15,6 +15,10 @@ function openMenu() {
   const burger = document.querySelector('div.burger');
   const elements = document.querySelectorAll('div.x, div.y, div.z');
   const menuItems = document.querySelectorAll('.menu2-menus li');
+  const body = document.querySelector('body');
+
+  body.style.overflow = "hidden";
+  body.style.touchAction = "none";
 
   circle.classList.add('expand');
   burger.classList.add('open');
@@ -43,6 +47,10 @@ function closeMenu() {
   const z = document.querySelector('div.z');
   const circle = document.querySelector('div.circle');
   const menuItems = document.querySelectorAll('.menu2-menus li');
+  const body = document.querySelector('body');
+
+  body.style.overflow = "";
+  body.style.touchAction = "auto";
 
   burger.classList.remove('open');
   x.classList.remove('rotate45');
