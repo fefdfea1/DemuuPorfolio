@@ -31,7 +31,6 @@
   transition: all 1s;
   width: 35%;
   max-height: 40%;
-  /* overflow: hidden; */
 }
 
 .img-bx.widthUp {
@@ -222,6 +221,20 @@
   height: 3px;
   background-color: #212121;
 }
+
+
+/* ---------- section2 ---------- */
+.portfolio-shortcut {
+  border: solid 1px #000;
+  height: 500px;
+}
+
+
+
+
+
+
+
 
 
 @media (max-width: 1400px) {
