@@ -467,7 +467,8 @@
   }
   
   .text2 {
-    font-size: 5rem;
+    padding-top: 30px;
+    font-size: 4rem;
   }
 
   /* -----프로젝트 년도----- */
@@ -517,7 +518,6 @@
   .Text {
     top: calc(100vh - 50vh - 220px);
   }
-
 
   .project-since {
     display: none;
