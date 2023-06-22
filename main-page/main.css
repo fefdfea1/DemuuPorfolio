@@ -514,6 +514,11 @@
 }
 
 @media (max-width: 400px) {
+  .Text {
+    top: calc(100vh - 50vh - 220px);
+  }
+
+
   .project-since {
     display: none;
   }
