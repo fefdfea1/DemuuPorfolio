@@ -12,7 +12,6 @@ function loadingTxt() {
     }, i * 150);
 
     setTimeout(() => {
-      
       document.querySelector(".loading-screen").style.opacity = "0";
       setTimeout(() => {
         document.querySelector(".loading-screen").style.display = "none";
@@ -23,6 +22,4 @@ function loadingTxt() {
   }
 }
 
-export const loadingScreen = () => {
   loadingTxt();
-};

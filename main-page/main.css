@@ -2,6 +2,16 @@
 
 /* ------------- banner animation ----------- */
 
+body {
+  position: relative;
+  z-index: -1;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 #slide-section {
   position: relative;
   z-index: -1;
@@ -41,7 +51,7 @@
   width: 100vw;
   height: 380px;
   position: absolute;
-  top: calc(100vh - 50vh - 210px);
+  top: calc(100vh - 50vh - 170px);
   left: 0%;
   overflow: hidden;
   text-align: center;
@@ -222,12 +232,19 @@
   background-color: #212121;
 }
 
+.down-arrow {
+  height: 120px;
+  text-align: center;
+  font-size: 38px;
+  color: #424242;
+}
+.down-arrow i {
+  padding-top: 60px;
+}
+
 
 /* ---------- section2 ---------- */
-.portfolio-shortcut {
-  border: solid 1px #000;
-  height: 500px;
-}
+
 
 
 
