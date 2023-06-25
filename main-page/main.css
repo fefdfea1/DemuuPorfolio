@@ -247,8 +247,13 @@ body::-webkit-scrollbar {
 
 /* ---------- section2 ---------- */
 
+.portfolio-shortcut {
+  position: relative;
+  z-index: -3;
+}
+
 .portfolio-logo {
-  width: 100%;
+  width: 50%;
   height: 100vh;
 }
 
