@@ -12,7 +12,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-#slide-section {
+.slide-section {
   position: relative;
   z-index: -1;
 }
@@ -240,13 +240,23 @@ body::-webkit-scrollbar {
 }
 .down-arrow i {
   padding-top: 60px;
+  transform: translateY(0);
+  transition: all 1s;
 }
 
 
 /* ---------- section2 ---------- */
 
+.portfolio-logo {
+  width: 100%;
+  height: 100vh;
+}
 
-
+.portfolio-logo svg {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
 
 
 

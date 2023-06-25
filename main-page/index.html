@@ -8,7 +8,11 @@
     <link rel="icon" href="../img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../fullPage/jquery.fullPage.css">
+
     <script src="../common/includeHTML.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="../fullPage/jquery.fullPage.js"></script>
 
     <title>Demuu Gallery</title>
   </head>
@@ -16,90 +20,141 @@
     
     <header data-include="../common/header.html"></header>
 
-    <section id="slide-section">
-      <div class="container">
-        <ul class="carosel clearfix">
-          <li>
-            <div class="img-bx widthUp ib1">
-              <img src="../img/banner1.png" alt="banner1" />
+    <main id="fullpage">
+      <section class="section">
+        <div class="slide-section">
+          <div class="container">
+            <ul class="carosel clearfix">
+              <li>
+                <div class="img-bx widthUp ib1">
+                  <img src="../img/banner1.png" alt="banner1" />
+                </div>
+              </li>
+              <li>
+                <div class="img-bx ib2">
+                  <img src="../img/banner2.png" alt="banner2" />
+                </div>
+              </li>
+              <li>
+                <div class="img-bx ib3">
+                  <img src="../img/banner3.jpg" alt="banner3" />
+                </div>
+              </li>
+              <li>
+                <div class="img-bx ib4">
+                  <img src="../img/banner4.jpg" alt="banner4" />
+                </div>
+              </li>
+            </ul>
+            <div class="Text">
+              <p class="text1"><a href="https://uncoversound.com" target="_blank">UNCOVER</a></p>
+              <p class="text1"><a href="">CAMP US</a></p>
+              <p class="text2"><a href="">MORE</a></p>
+              <p class="text2"><a href="">HUGO</a></p>
             </div>
-          </li>
-          <li>
-            <div class="img-bx ib2">
-              <img src="../img/banner2.png" alt="banner2" />
+          </div>
+    
+          <!-- 프로젝트 년도 -->
+          <div class="project-since">
+            <div class="since-item">
+              <div class="item-bar item-bar-active"></div>
+              <div class="item-txt item-txt-active">2023</div>
             </div>
-          </li>
-          <li>
-            <div class="img-bx ib3">
-              <img src="../img/banner3.jpg" alt="banner3" />
+    
+            <div class="since-item">
+              <div class="item-bar"></div>
+              <div class="item-txt">2023</div>
             </div>
-          </li>
-          <li>
-            <div class="img-bx ib4">
-              <img src="../img/banner4.jpg" alt="banner4" />
+    
+            <div class="since-item">
+              <div class="item-bar"></div>
+              <div class="item-txt">2022</div>
             </div>
-          </li>
-        </ul>
-        <div class="Text">
-          <p class="text1"><a href="https://uncoversound.com" target="_blank">UNCOVER</a></p>
-          <p class="text1"><a href="">CAMP US</a></p>
-          <p class="text2"><a href="">MORE</a></p>
-          <p class="text2"><a href="">HUGO</a></p>
+    
+            <div class="since-item">
+              <div class="item-bar"></div>
+              <div class="item-txt">2021</div>
+            </div>
+          </div>
+    
+          <div class="project-since-bars clearfix">
+            <div class="since-item2">
+              <div class="item-bar2 item-bar2-active"></div>
+            </div>
+    
+            <div class="since-item2">
+              <div class="item-bar2"></div>
+            </div>
+    
+            <div class="since-item2">
+              <div class="item-bar2"></div>
+            </div>
+    
+            <div class="since-item2">
+              <div class="item-bar2"></div>
+            </div>
+          </div>
+    
+          <div class="down-arrow">
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
         </div>
-      </div>
-
-      <!-- 프로젝트 년도 -->
-      <div class="project-since">
-        <div class="since-item">
-          <div class="item-bar item-bar-active"></div>
-          <div class="item-txt item-txt-active">2023</div>
+      </section>
+  
+      <section class="section">
+        <div class="portfolio-shortcut">
+          <div class="portfolio-logo">
+            <svg viewBox="0 165 1000 658" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <circle id="particle" cx="0" cy="0" r="6" />
+                <path id="sixteen"
+                  d="M607,40.37l-20.46,18L574.33,44.26l33.28-28.08h20.16v102H607V40.37h0Zm70.72,12.24c1.15-.29,2.3-0.53,3.46-0.72a21.68,21.68,0,0,1,3.6-.29,32.22,32.22,0,0,1,13.1,2.59A30.28,30.28,0,0,1,708,61.25a31.29,31.29,0,0,1,6.48,10.59,36.65,36.65,0,0,1,2.31,13,33.32,33.32,0,0,1-11,25.35,36.15,36.15,0,0,1-12.1,7.13,45.59,45.59,0,0,1-29.87,0,36.28,36.28,0,0,1-12-7.13,33.3,33.3,0,0,1-8.06-11,34,34,0,0,1-3-14.33,46.59,46.59,0,0,1,1-10,51.91,51.91,0,0,1,2.67-8.57,55.29,55.29,0,0,1,3.89-7.71Q650.52,54.91,653,51L675.3,16.17h26.35ZM695.18,84a15.5,15.5,0,0,0-4.54-11.45Q686.1,68,678.76,68c-4.89,0-8.86,1.51-11.88,4.54A15.48,15.48,0,0,0,662.34,84a15.52,15.52,0,0,0,4.54,11.45q4.54,4.54,11.88,4.54c4.89,0,8.86-1.52,11.88-4.54A15.51,15.51,0,0,0,695.18,84Z" />
+              </defs>
+              <g id="pContainer" clip-path="url(#logoMask)" />
+              <clipPath id="logoMask">
+                <path id="mainLogo" d="M561.144409,631.019653 
+                  C561.085205,629.859436 560.974182,628.699280 560.974121,627.539062 
+                  C560.970520,541.326172 560.975586,455.113251 561.253784,368.304321 
+                  C561.722168,367.461914 561.868652,367.189636 561.967041,366.891479 
+                  C561.644897,365.658539 561.040833,364.425201 561.042480,363.192719 
+                  C561.074097,339.942474 540.218262,318.801331 518.087219,315.067841 
+                  C513.419739,314.280426 508.610962,314.053986 503.866302,314.044220 
+                  C465.535309,313.965332 427.204102,314.000000 388.872955,314.000000 
+                  C387.074432,314.000000 385.275909,314.000000 383.076965,314.000000 
+                  C383.076965,473.722473 383.076965,633.119812 383.076965,792.758301 
+                  C346.604218,792.758301 310.535583,792.758301 274.233246,792.758301 
+                  C274.233246,596.929260 274.233246,401.200378 274.233246,205.000610 
+                  C275.777069,205.000610 277.223358,205.000610 278.669678,205.000610 
+                  C357.165192,205.000488 435.661896,204.767639 514.155457,205.155258 
+                  C535.160400,205.258987 555.400818,210.275085 574.640503,219.147598 
+                  C590.366394,226.399673 604.264465,235.976059 617.310547,247.439087 
+                  C631.537109,259.939362 642.868347,274.537079 651.734680,290.840027 
+                  C660.019409,306.073608 666.343140,322.454376 667.901428,340.008850 
+                  C669.370178,356.555176 670.796875,373.173004 670.860596,389.764709 
+                  C671.164124,468.759033 671.180969,547.755859 670.897522,626.750305 
+                  C670.796997,654.782104 665.619690,681.807434 652.093567,706.895142 
+                  C642.777527,724.174011 631.087036,739.537720 616.653992,752.684814 
+                  C594.539734,772.828857 568.063354,784.571777 539.095764,790.843079 
+                  C532.106384,792.356201 524.785156,792.864380 517.611023,792.907349 
+                  C483.293091,793.112915 448.973297,792.999512 414.326874,792.999512 
+                  C414.326874,757.114014 414.326874,721.377747 414.326874,685.000000 
+                  C415.913208,685.000000 417.670105,685.000000 419.427002,685.000000 
+                  C446.592102,685.000000 473.757385,685.055847 500.922272,684.975769 
+                  C514.035522,684.937134 526.881775,683.545593 537.974304,675.526733 
+                  C551.922241,665.443542 561.142883,652.669922 561.032043,634.634338 
+                  C561.028442,634.049194 561.437439,633.461609 561.718323,632.278564 
+                  C561.653870,631.380188 561.441162,631.159424 561.144409,631.019653"/>
+              </clipPath>
+            </svg>
+          </div>
         </div>
-
-        <div class="since-item">
-          <div class="item-bar"></div>
-          <div class="item-txt">2023</div>
-        </div>
-
-        <div class="since-item">
-          <div class="item-bar"></div>
-          <div class="item-txt">2022</div>
-        </div>
-
-        <div class="since-item">
-          <div class="item-bar"></div>
-          <div class="item-txt">2021</div>
-        </div>
-      </div>
-
-      <div class="project-since-bars clearfix">
-        <div class="since-item2">
-          <div class="item-bar2 item-bar2-active"></div>
-        </div>
-
-        <div class="since-item2">
-          <div class="item-bar2"></div>
-        </div>
-
-        <div class="since-item2">
-          <div class="item-bar2"></div>
-        </div>
-
-        <div class="since-item2">
-          <div class="item-bar2"></div>
-        </div>
-      </div>
-
-      <div class="down-arrow">
-        <i class="fa-solid fa-chevron-down"></i>
-      </div>
-    </section>
-
-    <section>
-      <div class="portfolio-shortcut"></div>
-    </section>
+      </section>
+    </main>
 
     <script src="./main.js" type="module"></script>
     <script src="../common/common.js" type="module"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js'></script>
     
   </body>
 </html>
