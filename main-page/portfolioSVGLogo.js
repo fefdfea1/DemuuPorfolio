@@ -63,3 +63,15 @@ TweenMax.set('#wholeLogo', {
 });
 
 TweenMax.globalTimeScale(0.75);
+
+
+// portfolio logo movement with scroll in 932 positions
+window.addEventListener('scroll', () => {
+  let scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (scrollPosition === 932) {
+    console.log("success!")
+  }
+});
+
+

@@ -9,7 +9,13 @@ body {
 }
 
 body::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  border: solid 1px #000;
 }
 
 .slide-section {
