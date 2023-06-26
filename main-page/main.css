@@ -122,7 +122,7 @@ body::-webkit-scrollbar {
   bottom: -20px;
   width: 90%;
   height: 40px;
-  background: url(../img/banner2.png) no-repeat;
+  background: url(../img/banner2.jpg) no-repeat;
   background-size: 100% 40px;
   filter: blur(15px);
   opacity: 0.5;
@@ -249,23 +249,26 @@ body::-webkit-scrollbar {
 
 .portfolio-shortcut {
   position: relative;
-  z-index: -3;
 }
 
 .portfolio-logo {
-  width: 50%;
+  width: 40%;
   height: 100vh;
 }
 
 .portfolio-logo svg {
-  width: 100%;
   height: 100%;
+  width: 100%;
   visibility: hidden;
 }
 
-
-
-
+.portfolio-logo-name {
+  position: absolute;
+  left: 2%;
+  bottom: 22%;
+  width: 7%;
+  transition: all .5s;
+}
 
 
 
