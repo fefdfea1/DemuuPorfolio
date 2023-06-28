@@ -1,9 +1,9 @@
 function scroll () {
-  window.onload = function(){
+  window.onload = () => {
     const elm = document.querySelectorAll('.section');
     const elmCount = elm.length;
-    elm.forEach(function(item, index){
-      item.addEventListener('mousewheel', function(event){
+    elm.forEach((item, index) => {
+      item.addEventListener('mousewheel', (event) => {
         event.preventDefault();
         let delta = 0;
   
