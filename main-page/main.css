@@ -258,8 +258,11 @@ section {
 }
 
 .portfolio-logo {
-  width: 40%;
+  position: relative;
+  width: 100%;
   height: 100vh;
+  transition: all 1.2s;
+  background-color: #fff;
 }
 
 .portfolio-logo svg {
@@ -269,13 +272,43 @@ section {
 }
 
 .portfolio-logo-name {
+  opacity: 0;
   position: absolute;
-  left: 2%;
-  bottom: 22%;
-  width: 7%;
-  transition: all .5s;
+  left: 8%;
+  bottom: 17.5%;
+  width: 15%;
+  transition: all .8s;
 }
 
+.triangle {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: -150px;
+  width: 0;
+  height: 0;
+  border-bottom: 100vh solid transparent;
+  border-top: 100vh solid #fff;
+  border-left: 50px solid #fff;
+  border-right: 150px solid transparent;
+}
+
+.portfolio-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100vh;
+  background-color: #000;
+  z-index: -1;
+}
+.portfolio-title {
+  position: absolute;
+  top: 6%;
+  right: 6%;
+  font-size: 6.5em;
+  color: #fff;
+}
 
 
 @media (max-width: 1400px) {
