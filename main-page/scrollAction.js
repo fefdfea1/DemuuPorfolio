@@ -17,12 +17,12 @@ function scroll () {
   
         let moveTop = window.scrollY;
         let elmSelector = elm[index];
-  
+
         // wheel down : move to next section
         if (delta < 0){
           if (elmSelector !== elmCount-1){
             try{
-              moveTop = window.pageYOffset + elmSelector.nextElementSibling.getBoundingClientRect().top;
+              moveTop = window.scrollY + elmSelector.nextElementSibling.getBoundingClientRect().top;
             }catch(e){}
           }
         }
@@ -30,12 +30,11 @@ function scroll () {
         else{
           if (elmSelector !== 0){
             try{
-              moveTop = window.pageYOffset + elmSelector.previousElementSibling.getBoundingClientRect().top;
+              moveTop = window.scrollY + elmSelector.previousElementSibling.getBoundingClientRect().top;
             }catch(e){}
           }
         }
   
-        const body = document.querySelector('html');
         window.scrollTo({top:moveTop, left:0, behavior:'smooth'});
       });
     });
