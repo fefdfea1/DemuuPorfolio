@@ -309,7 +309,44 @@ section {
   font-size: 6.5em;
   color: #fff;
 }
+.portfolio-txt {
+  position: absolute;
+  top: 34%;
+  right: 6%;
+  font-size: 1em;
+  color: #fff;
+  text-align: right;
+}
+.minor-title {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 100px;
+  padding-right: 2px;
+  border-right: 2px solid #e0e0e0;
+  animation: blink .9s infinite steps(2);
+}
+.portfolio-txt p {line-height: 2em;}
+.sentences1 {
+  margin-bottom: 50px;
+}
+.stn1-after::after {
+  content: '';
+  padding-right: 2px;
+  border-right: 2px solid #e0e0e0;
+  animation: blink .9s infinite steps(2);
+}
+.stn2-after::after {
+  content: '';
+  padding-right: 2px;
+  border-right: 2px solid #e0e0e0;
+  animation: blink .9s infinite steps(2);
+}
 
+@keyframes blink {
+  from { border-color: transparent; }
+  to { border-color: #e0e0e0; }
+}
 
 @media (max-width: 1400px) {
   .Text {
