@@ -3,8 +3,7 @@ import {downArrow } from "./section1Js/downArrow.js";
 import {portfolioLogo} from "./section2Js/portfolioSVGLogo.js";
 import {scrollAction} from "./scrollAction.js";
 import {section2Animation} from "./section2Js/section2Entry.js";
-
-// window.scrollTo({ top: 0, behavior: 'smooth' });
+import {cusorAction} from "./cursor.js";
 
 const init = () => {
   initCaroselUl();
@@ -12,5 +11,6 @@ const init = () => {
 	portfolioLogo();
   scrollAction();
   section2Animation();
+  cusorAction();
 };
 init();
