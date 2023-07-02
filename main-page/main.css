@@ -1,9 +1,7 @@
 @import url("../common/reset.css");
-
-a:hover {
+*{
   cursor: none;
 }
-
 .cursor {
   position: fixed;
   width: 2em;
@@ -23,7 +21,6 @@ body {
   position: relative;
   z-index: -1;
   overflow-x: hidden;
-  cursor: none;
 }
 
 body::-webkit-scrollbar {
