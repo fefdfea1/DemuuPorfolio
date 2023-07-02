@@ -60,7 +60,7 @@ export const scrollAction = () => {
 // 현재 스크롤 위치와 구하기
 function getScrollPosition() {
   let scrollPosition = window.scrollY || document.documentElement.scrollTop;
-  section2Animation(scrollPosition);
+  section2Animation(Math.floor(scrollPosition));
   console.log(scrollPosition);
 }
 getScrollPosition();

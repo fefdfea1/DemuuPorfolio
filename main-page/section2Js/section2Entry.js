@@ -18,7 +18,7 @@ export const section2Animation = (() => {
 
     const arrow = document.querySelector('.portfolio-arrow');
 
-    if (scrollPosition === section2Top && hasRun) {
+    if (scrollPosition === Math.floor(section2Top) && hasRun) {
       hasRun = false;
 
       setTimeout(() => {
