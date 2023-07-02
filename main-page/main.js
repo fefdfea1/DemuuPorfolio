@@ -11,6 +11,8 @@ const init = () => {
   downArrow();
 	portfolioLogo();
   scrollAction();
-  section2Animation();
+  window.addEventListener('load', () => {
+    section2Animation();
+  });
 };
 init();
