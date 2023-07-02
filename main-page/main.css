@@ -1,11 +1,29 @@
 @import url("../common/reset.css");
 
+a:hover {
+  cursor: none;
+}
+
+.cursor {
+  position: fixed;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: (-50%, -50%);
+  background-color: rgba(0, 0, 0, .5);
+  transition: all .1s;
+}
+
 /* ------------- banner animation ----------- */
 
 body {
   position: relative;
   z-index: -1;
   overflow-x: hidden;
+  cursor: none;
 }
 
 body::-webkit-scrollbar {
@@ -13,9 +31,10 @@ body::-webkit-scrollbar {
 }
 
 section {
+  position: relative;
+  z-index: -1;
   width: 100vw;
   height: 100vh;
-  border: solid 1px #000;
 }
 
 .slide-section {
@@ -255,11 +274,12 @@ section {
 
 .portfolio-shortcut {
   position: relative;
+  z-index: -1;
 }
 
 .portfolio-logo {
   position: relative;
-  width: 100%;
+  width: 100%;  /*<- 이고 */
   height: 100vh;
   transition: all 1.2s;
   background-color: #fff;
@@ -272,7 +292,7 @@ section {
 }
 
 .portfolio-logo-name {
-  opacity: 0;
+  opacity: 0; /*<- 이고 */
   position: absolute;
   left: 8%;
   bottom: 17.5%;
@@ -281,7 +301,7 @@ section {
 }
 
 .triangle {
-  display: none;
+  display: none; /*<- 이고 */
   position: absolute;
   top: 0;
   right: -150px;
@@ -322,32 +342,36 @@ section {
   font-size: 1.2em;
   font-weight: 600;
   margin-bottom: 100px;
-  padding-right: 2px;
-  border-right: 2px solid #e0e0e0;
-  animation: blink .9s infinite steps(2);
 }
 .portfolio-txt p {line-height: 2em;}
 .sentences1 {
   margin-bottom: 50px;
 }
-.stn1-after::after {
+.stn-after::after {
   content: '';
   padding-right: 2px;
   border-right: 2px solid #e0e0e0;
   animation: blink .9s infinite steps(2);
 }
-.stn2-after::after {
-  content: '';
-  padding-right: 2px;
-  border-right: 2px solid #e0e0e0;
-  animation: blink .9s infinite steps(2);
-}
-
 @keyframes blink {
   from { border-color: transparent; }
   to { border-color: #e0e0e0; }
 }
 
+
+.portfolio-arrow {
+  opacity: 0;
+  transition: all 1s;
+  position: absolute;
+  right: 6%;
+  bottom: 5%;
+}
+.portfolio-arrow a {
+  font-size: 20px;
+  color: #fff;
+}
+
+/* ---------------------- MEDIA ------------------------ */
 @media (max-width: 1400px) {
   .Text {
     height: 350px;

@@ -5,7 +5,6 @@ function scroll() {
   window.onload = () => {
     const elm = document.querySelectorAll(".section");
     const elmCount = elm.length;
-    let sectionPosition = 0;
     
     elm.forEach((item, index) => {
       item.addEventListener("mousewheel", (event) => {
@@ -32,7 +31,6 @@ function scroll() {
                 moveTop =
                   window.scrollY +
                   elmSelector.nextElementSibling.getBoundingClientRect().top;
-                  sectionPosition = Math.min(sectionPosition+1, elmCount - 1);
               } catch (e) {}
             }
           }
@@ -43,12 +41,10 @@ function scroll() {
                 moveTop =
                   window.scrollY +
                   elmSelector.previousElementSibling.getBoundingClientRect().top;
-                  sectionPosition = Math.max(sectionPosition - 1, 0);
               } catch (e) {}
             }
           }
-          
-          section2Animation(sectionPosition);
+        
           window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
           //마우스 인식 시간 설정
         }, 200);
@@ -60,3 +56,11 @@ function scroll() {
 export const scrollAction = () => {
   scroll();
 };
+
+// 현재 스크롤 위치와 구하기
+function getScrollPosition() {
+  let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+  section2Animation(scrollPosition);
+}
+getScrollPosition();
+window.addEventListener('scroll', getScrollPosition);
