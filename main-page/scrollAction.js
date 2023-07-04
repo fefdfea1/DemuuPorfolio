@@ -61,7 +61,6 @@ export const scrollAction = () => {
 function getScrollPosition() {
   let scrollPosition = window.scrollY || document.documentElement.scrollTop;
   section2Animation(Math.floor(scrollPosition));
-  console.log(scrollPosition);
 }
 getScrollPosition();
 window.addEventListener('scroll', getScrollPosition);

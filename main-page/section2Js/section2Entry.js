@@ -4,7 +4,6 @@ export const section2Animation = (() => {
   // section2 위치 값
   let section2 = document.querySelector('#section2');
   let section2Top = window.scrollY + section2.getBoundingClientRect().top;
-  console.log(section2Top);
 
 
   return (scrollPosition) => {
