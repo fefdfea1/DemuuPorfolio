@@ -22,7 +22,7 @@ export const section2Animation = (() => {
 
       setTimeout(() => {
         triangle.style.display = 'block';
-        portfolioLogo.style.width = '45%';
+        portfolioLogo.style.width = '40%';
         setTimeout(() => {
           portfolioName.style.opacity = '1';
         }, 700);
@@ -77,6 +77,10 @@ export const section2Animation = (() => {
       
         await Promise.all([minorPromise, sentences1Promise, sentences2Promise]);
       }, 3000);
+
+      setTimeout(() => {
+        document.querySelector('.section2-down-arrow').style.opacity = '1';
+      },10000)
     }
   };
 })();

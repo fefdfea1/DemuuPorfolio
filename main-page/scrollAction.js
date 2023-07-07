@@ -3,52 +3,112 @@ import { section2Animation } from "./section2Js/section2Entry.js";
 let timer;
 function scroll() {
   window.onload = () => {
-    const elm = document.querySelectorAll(".section");
-    const elmCount = elm.length;
-    
-    elm.forEach((item, index) => {
-      item.addEventListener("mousewheel", (event) => {
-        event.preventDefault();
-        if (timer) {
-          clearTimeout(timer);
+    const sections = document.querySelectorAll(".section");
+    const sectionCount = sections.length;
+
+    let startY = 0;
+    let endY = 0;
+    let eventListenerBySize;
+
+    if (window.innerWidth > 768) {
+      eventListenerBySize = "mousewheel";
+    } else {
+      eventListenerBySize = "touchmove";
+    }
+
+    const handleScroll = (event) => {
+      event.preventDefault();
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(() => {
+        let delta = 0;
+
+        if (!event) event = window.event;
+        if (event.wheelDelta) {
+          delta = event.wheelDelta / 120;
+          if (window.opera) delta = -delta;
+        } else if (event.detail) delta = -event.detail / 3;
+
+        let moveTop = window.scrollY;
+        let currentSectionIndex = -1;
+
+        // Find the index of the currently visible section
+        for (let i = 0; i < sectionCount; i++) {
+          const rect = sections[i].getBoundingClientRect();
+          if (rect.top >= 0) {
+            currentSectionIndex = i;
+            break;
+          }
         }
-        timer = setTimeout(() => {
-          let delta = 0;
 
-          if (!event) event = window.event;
-          if (event.wheelDelta) {
-            delta = event.wheelDelta / 120;
-            if (window.opera) delta = -delta;
-          } else if (event.detail) delta = -event.detail / 3;
-
-          let moveTop = window.scrollY;
-          let elmSelector = elm[index];
-
-          // wheel down : move to next section
-          if (delta < 0) {
-            if (elmSelector !== elmCount - 1) {
-              try {
-                moveTop =
-                  window.scrollY +
-                  elmSelector.nextElementSibling.getBoundingClientRect().top;
-              } catch (e) {}
-            }
+        // Scroll down: Move to the next section
+        if (delta < 0) {
+          if (currentSectionIndex < sectionCount - 1) {
+            moveTop +=
+              sections[currentSectionIndex + 1].getBoundingClientRect().top;
           }
-          // wheel up : move to previous section
-          else {
-            if (elmSelector !== 0) {
-              try {
-                moveTop =
-                  window.scrollY +
-                  elmSelector.previousElementSibling.getBoundingClientRect().top;
-              } catch (e) {}
-            }
+        }
+        // Scroll up: Move to the previous section
+        else if (delta > 0) {
+          if (currentSectionIndex > 0) {
+            moveTop +=
+              sections[currentSectionIndex - 1].getBoundingClientRect().top;
           }
-        
-          window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
-          //마우스 인식 시간 설정
-        }, 200);
-      });
+        }
+
+        window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
+      }, 200);
+    };
+
+    window.addEventListener(eventListenerBySize, handleScroll, {
+      passive: false,
+    });
+    window.addEventListener(
+      "touchstart",
+      (event) => {
+        startY = event.touches[0].clientY;
+      },
+      { passive: false }
+    );
+    window.addEventListener(
+      "touchmove",
+      (event) => {
+        event.preventDefault();
+        endY = event.touches[0].clientY;
+      },
+      { passive: false }
+    );
+    window.addEventListener("touchend", () => {
+      const delta = endY - startY;
+      let moveTop = window.scrollY;
+      let currentSectionIndex = -1;
+
+      // Find the index of the currently visible section
+      for (let i = 0; i < sectionCount; i++) {
+        const rect = sections[i].getBoundingClientRect();
+        if (rect.top >= 0) {
+          currentSectionIndex = i;
+          break;
+        }
+      }
+
+      // Swipe up: Move to the next section
+      if (delta > 0) {
+        if (currentSectionIndex > 0) {
+          moveTop +=
+            sections[currentSectionIndex - 1].getBoundingClientRect().top;
+        }
+      }
+      // Swipe down: Move to the previous section
+      else if (delta < 0) {
+        if (currentSectionIndex < sectionCount - 1) {
+          moveTop +=
+            sections[currentSectionIndex + 1].getBoundingClientRect().top;
+        }
+      }
+
+      window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
     });
   };
 }

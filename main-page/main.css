@@ -1,4 +1,5 @@
 @import url("../common/reset.css");
+
 *{
   cursor: none;
 }
@@ -309,13 +310,13 @@ section {
 }
 
 .down-arrow {
-  height: 120px;
+  height: 220px;
   text-align: center;
   font-size: 38px;
   color: #424242;
 }
 .down-arrow i {
-  padding-top: 60px;
+  padding-top: 160px;
   transform: translateY(0);
   transition: all 1s;
 }
@@ -346,7 +347,8 @@ section {
   opacity: 0; /*<- 이고 */
   position: absolute;
   left: 8%;
-  bottom: 17.5%;
+  bottom: 50%;
+  transform: translate(0, 115%);
   width: 15%;
   transition: all .8s;
 }
@@ -384,17 +386,20 @@ section {
   position: absolute;
   top: 34%;
   right: 6%;
-  font-size: 1em;
   color: #fff;
   text-align: right;
 }
 .minor-title {
-  display: block;
+  display: inline-block;
   font-size: 1.2em;
   font-weight: 600;
   margin-bottom: 100px;
 }
-.portfolio-txt p {line-height: 2em;}
+.portfolio-txt p {
+  line-height: 2em;
+  font-size: 1em;
+  display: inline-block;
+}
 .sentences1 {
   margin-bottom: 50px;
 }
@@ -409,7 +414,6 @@ section {
   to { border-color: #e0e0e0; }
 }
 
-
 .portfolio-arrow {
   opacity: 0;
   transition: all 1s;
@@ -422,13 +426,39 @@ section {
   color: #fff;
 }
 
+.section2-down-arrow {
+  opacity: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+  color: #fff;
+  font-size: 38px;
+  transition: all 1s;
+}
+.section2-down-arrow i {
+  transform: translateY(0);
+  transition: all 1s;
+}
+
+
+
+
 /* ---------------------- MEDIA ------------------------ */
 @media (max-width: 1400px) {
+  /* ----- 공용 ------ */
+  .mediaDA {
+    font-size: 36px;
+  }
+
+
+  /* ----- section1 ----- */
   .Text {
     height: 350px;
     top: calc(100vh - 50vh - 230px);
   }
-  
+
   .Text p {
     height: 280px;
   }
@@ -436,12 +466,11 @@ section {
   .text1 {
     font-size: 15rem;
   }
-  
+
   .text2 {
     font-size: 20rem;
   }
 
-  /* -----프로젝트 년도----- */
   .project-since {
     transform: translate(0, -60%);
   }
@@ -462,28 +491,46 @@ section {
     font-size: 18px;
   }
 
-
-
   .project-since-bars {
     transform: translate(0, -60%);
   }
-  
+
   .item-bar2 {
     width: 18px;
   }
-  
+
   .item-bar2-active {
     width: 48px;
+  }
+
+  /* ----- section2 ----- */
+  .portfolio-title {
+    font-size: 5em;
+  }
+  .minor-title {
+    font-size: 1em;
+  }
+  .portfolio-txt p {
+    font-size: .85em;
+  }
+  .portfolio-arrow a {
+    font-size: 16px;
   }
 
 }
 
 @media (max-width: 1200px) {
+  /* ----- 공용 ------ */
+  .mediaDA {
+    font-size: 32px;
+  }
+
+  /* ----- section1 ----- */
   .Text {
     height: 300px;
     top: calc(100vh - 50vh - 230px);
   }
-  
+
   .Text p {
     height: 250px;
   }
@@ -491,12 +538,11 @@ section {
   .text1 {
     font-size: 11rem;
   }
-  
+
   .text2 {
     font-size: 16rem;
   }
 
-  /* -----프로젝트 년도----- */
   .project-since {
     transform: translate(0, -80%);
   }
@@ -522,30 +568,50 @@ section {
     font-size: 18px;
   }
 
-
   .project-since-bars {
     transform: translate(0, -80%);
   }
-  
+
   .since-item2 {
     padding: 24px 0;
   }
-  
+
   .item-bar2 {
     width: 16px;
   }
-  
+
   .item-bar2-active {
     width: 46px;
   }
+
+  /* ----- section2 ----- */
+  .portfolio-title {
+    font-size: 4em;
+  }
+  .minor-title {
+    font-size: .8em;
+  }
+  .portfolio-txt p {
+    font-size: .6em;
+  }
+  .portfolio-arrow a {
+    font-size: 14px;
+  }
+
 }
 
 @media (max-width: 992px) {
+    /* ----- 공용 ------ */
+    .mediaDA {
+      font-size: 28px;
+    }
+
+  /* ----- section1 ----- */
   .Text {
     height: 200px;
     top: calc(100vh - 50vh - 260px);
   }
-  
+
   .Text p {
     height: 200px;
   }
@@ -553,12 +619,11 @@ section {
   .text1 {
     font-size: 8rem;
   }
-  
+
   .text2 {
     font-size: 12rem;
   }
 
-  /* -----프로젝트 년도----- */
   .project-since {
     top: 43%;
   }
@@ -572,7 +637,6 @@ section {
   }
 
   .item-txt {
-    /* padding-left: 8px; */
     font-size: 12px;
   }
 
@@ -584,30 +648,55 @@ section {
     font-size: 16px;
   }
 
-  
+
   .project-since-bars {
     top: 43%;
   }
-  
+
   .since-item2 {
     padding: 20px 0;
   }
-  
+
   .item-bar2 {
     width: 14px;
   }
-  
+
   .item-bar2-active {
     width: 44px;
+  }
+
+  /* ----- section2 ----- */
+  .portfolio-title {
+    font-size: 4em;
+  }
+  .minor-title {
+    font-size: .8em;
+  }
+  .portfolio-txt p {
+    font-size: .6em;
+  }
+  .portfolio-arrow a {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 768px) {
-  .Text {
+
+  /* ----- section1 ----- */
+  .slide-section {
+    display: none;
+  }
+  header {
+    position: fixed;
+  }
+  #header .header-logo {
+    display: none;
+  }
+  /* .Text {
     height: 150px;
     top: calc(100vh - 50vh - 280px);
   }
-  
+
   .Text p {
     height: 150px;
   }
@@ -615,12 +704,11 @@ section {
   .text1 {
     font-size: 6rem;
   }
-  
+
   .text2 {
     font-size: 9rem;
   }
 
-  /* -----프로젝트 년도----- */
   .project-since {
     top: 36%;
   }
@@ -641,22 +729,25 @@ section {
   .project-since-bars {
     top: 36%;
   }
-  
+
   .since-item2 {
     padding: 18px 0;
   }
 
   .item-bar2-active {
     width: 42px;
-  }
+  } */
 }
 
+/* phone size */
 @media (max-width: 576px) {
+
+  /* ----- section1 ----- */
   .Text {
     height: 120px;
     top: calc(100vh - 50vh - 300px);
   }
-  
+
   .Text p {
     height: 130px;
   }
@@ -664,13 +755,12 @@ section {
   .text1 {
     font-size: 4rem;
   }
-  
+
   .text2 {
     padding-top: 30px;
     font-size: 4rem;
   }
 
-  /* -----프로젝트 년도----- */
   .project-since {
     top: 32%;
   }
@@ -699,21 +789,24 @@ section {
   .project-since-bars {
     top: 32%;
   }
-  
+
   .since-item2 {
     padding: 18px 0;
   }
-  
+
   .item-bar2 {
     width: 10px;
   }
-  
+
   .item-bar2-active {
     width: 35px;
   }
 }
 
+/* iphone mini size */
 @media (max-width: 400px) {
+
+  /* ----- section1 ----- */
   .Text {
     top: calc(100vh - 50vh - 220px);
   }
@@ -721,6 +814,7 @@ section {
   .project-since {
     display: none;
   }
+
   .project-since-bars {
     display: none;
   }

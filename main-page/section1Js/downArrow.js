@@ -1,7 +1,6 @@
 const arrow = document.querySelector('.down-arrow i');
 
 function animateArrow() {
-  arrow.style.transform = 'translateY(0)';
   setTimeout(() => {
     arrow.style.transform = 'translateY(-15%)';
     setTimeout(() => {
