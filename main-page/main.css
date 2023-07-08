@@ -683,11 +683,9 @@ section {
 @media (max-width: 768px) {
 
   /* ----- section1 ----- */
-  .slide-section {
-    display: none;
-  }
   header {
     position: fixed;
+    z-index: 10;
   }
   #header .header-logo {
     display: none;
