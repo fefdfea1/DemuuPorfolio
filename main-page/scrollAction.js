@@ -9,6 +9,7 @@ function scroll() {
     let startY = 0;
     let endY = 0;
     let eventListenerBySize;
+    let isTouchMove = false; // 터치 슬라이드 여부를 확인하기 위한 플래그 변수
 
     if (window.innerWidth > 768) {
       eventListenerBySize = "mousewheel";
@@ -36,7 +37,7 @@ function scroll() {
         // Find the index of the currently visible section
         for (let i = 0; i < sectionCount; i++) {
           const rect = sections[i].getBoundingClientRect();
-          if (rect.top >= 0) {
+          if (rect.top >= 0 && window.getComputedStyle(sections[i]).display !== 'none') {
             currentSectionIndex = i;
             break;
           }
@@ -68,6 +69,7 @@ function scroll() {
       "touchstart",
       (event) => {
         startY = event.touches[0].clientY;
+        isTouchMove = false; // 터치 시작 시 플래그 초기화
       },
       { passive: false }
     );
@@ -76,10 +78,13 @@ function scroll() {
       (event) => {
         event.preventDefault();
         endY = event.touches[0].clientY;
+        isTouchMove = true; // 터치 이동 시 플래그 설정
       },
       { passive: false }
     );
     window.addEventListener("touchend", () => {
+      if (!isTouchMove) return; // 터치 이동이 없을 경우 스크롤 작동하지 않음
+
       const delta = endY - startY;
       let moveTop = window.scrollY;
       let currentSectionIndex = -1;
@@ -87,7 +92,7 @@ function scroll() {
       // Find the index of the currently visible section
       for (let i = 0; i < sectionCount; i++) {
         const rect = sections[i].getBoundingClientRect();
-        if (rect.top >= 0) {
+        if (rect.top >= 0 && window.getComputedStyle(sections[i]).display !== 'none') {
           currentSectionIndex = i;
           break;
         }

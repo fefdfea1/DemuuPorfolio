@@ -14,14 +14,13 @@
   pointer-events: none;
   opacity: 0;
   transform: translate(-50%, -50%);
-  background-color: #757575; /*사용자 수정*/
+  background-color: #000; /*사용자 수정*/
   backface-visibility: hidden;
   transition: none;
   mix-blend-mode: difference; /*사용자 수정*/
   pointer-events: none;
   border-radius: 50%;
   transform: scale(1);
-  transition: all .1s;
 }
 
 .custom-cursor-icon {
@@ -682,12 +681,17 @@ section {
 
 @media (max-width: 768px) {
 
+
   /* ----- section1 ----- */
   header {
     position: fixed;
     z-index: 10;
   }
   #header .header-logo {
+    display: none;
+  }
+
+  #section1 {
     display: none;
   }
   /* .Text {
