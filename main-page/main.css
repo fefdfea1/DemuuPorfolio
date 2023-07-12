@@ -82,6 +82,7 @@ section {
   z-index: -1;
   width: 100vw;
   height: 100vh;
+  background-color: #fff;
 }
 
 #section1 {
@@ -232,8 +233,6 @@ section {
   opacity: 0.5;
 }
 
-/* 텍스트 슬라이드 반사 효과 (나중에......) */
-
 
 /* -------------------프로젝트 년도--------------------- */
 .project-since {
@@ -334,6 +333,7 @@ section {
   height: 100vh;
   transition: all 1.2s;
   background-color: #fff;
+  opacity: 1;
 }
 
 .portfolio-logo svg {
@@ -451,11 +451,14 @@ section {
     font-size: 36px;
   }
 
-
   /* ----- section1 ----- */
+  .container {
+    padding-top: 170px;
+  }
+  
   .Text {
     height: 350px;
-    top: calc(100vh - 50vh - 230px);
+    top: calc(100vh - 50vh - 150px);
   }
 
   .Text p {
@@ -463,11 +466,11 @@ section {
   }
 
   .text1 {
-    font-size: 15rem;
+    font-size: 15vw;
   }
 
   .text2 {
-    font-size: 20rem;
+    font-size: 20vw;
   }
 
   .project-since {
@@ -527,7 +530,6 @@ section {
   /* ----- section1 ----- */
   .Text {
     height: 300px;
-    top: calc(100vh - 50vh - 230px);
   }
 
   .Text p {
@@ -535,11 +537,11 @@ section {
   }
 
   .text1 {
-    font-size: 11rem;
+    font-size: 13vw;
   }
 
   .text2 {
-    font-size: 16rem;
+    font-size: 18vw;
   }
 
   .project-since {
@@ -608,7 +610,7 @@ section {
   /* ----- section1 ----- */
   .Text {
     height: 200px;
-    top: calc(100vh - 50vh - 260px);
+    top: calc(100vh - 50vh - 180px);
   }
 
   .Text p {
@@ -616,11 +618,11 @@ section {
   }
 
   .text1 {
-    font-size: 8rem;
+    font-size: 12vw;
   }
 
   .text2 {
-    font-size: 12rem;
+    font-size: 17vw;
   }
 
   .project-since {
@@ -666,158 +668,86 @@ section {
 
   /* ----- section2 ----- */
   .portfolio-title {
-    font-size: 4em;
+    font-size: 6vw;
   }
+
   .minor-title {
-    font-size: .8em;
+    font-size: 1.8vw;
   }
   .portfolio-txt p {
-    font-size: .6em;
+    font-size: 1.5vw;
   }
   .portfolio-arrow a {
-    font-size: 14px;
+    font-size: 1.5vw;
   }
 }
 
+/* phone size */
 @media (max-width: 768px) {
 
+  * {
+    cursor: auto;
+  }
+  section {
+    width: 100%;
+    height: 100%;
+  }
 
-  /* ----- section1 ----- */
+  /* ----- header ----- */
   header {
-    position: fixed;
-    z-index: 10;
+    display: none;
   }
   #header .header-logo {
     display: none;
   }
 
+  /* ----- section1 ----- */
   #section1 {
     display: none;
   }
-  /* .Text {
-    height: 150px;
-    top: calc(100vh - 50vh - 280px);
+
+  /* ----- section2 ----- */
+  .portfolio-content {
+    width: 100%;
   }
 
-  .Text p {
-    height: 150px;
+  .portfolio-title {
+    position: static;
+    text-align: center;
+    margin-top: 80px;
+    font-size: 12vw;
   }
 
-  .text1 {
-    font-size: 6rem;
+  .portfolio-txt {
+    position: static;
+    width: 80%;
+    margin: 80px auto 0 auto;
+  }
+  .portfolio-txt-title {
+    width: 100%;
   }
 
-  .text2 {
-    font-size: 9rem;
+  .minor-title {
+    font-size: 4vw;
   }
-
-  .project-since {
-    top: 36%;
+  .portfolio-txt p {
+    font-size: 3vw;
   }
-
-  .item-txt {
-    padding-left: 6px;
+  .portfolio-arrow a {
+    font-size: 3vw;
   }
-
-  .item-bar-active {
-    width: 42px;
+  .portfolio-arrow {
+    bottom: 10%;
+    right: 10%;
   }
-
-  .item-txt-active {
-    font-size: 14px;
-  }
-
-
-  .project-since-bars {
-    top: 36%;
-  }
-
-  .since-item2 {
-    padding: 18px 0;
-  }
-
-  .item-bar2-active {
-    width: 42px;
-  } */
 }
 
 /* phone size */
 @media (max-width: 576px) {
 
-  /* ----- section1 ----- */
-  .Text {
-    height: 120px;
-    top: calc(100vh - 50vh - 300px);
-  }
-
-  .Text p {
-    height: 130px;
-  }
-
-  .text1 {
-    font-size: 4rem;
-  }
-
-  .text2 {
-    padding-top: 30px;
-    font-size: 4rem;
-  }
-
-  .project-since {
-    top: 32%;
-  }
-
-  .since-item {
-    padding: 10px 0;
-  }
-
-  .item-bar {
-    width: 10px;
-  }
-
-  .item-txt {
-    padding-left: 4px;
-  }
-
-  .item-bar-active {
-    width: 35px;
-  }
-
-  .item-txt-active {
-    font-size: 12px;
-  }
-
-
-  .project-since-bars {
-    top: 32%;
-  }
-
-  .since-item2 {
-    padding: 18px 0;
-  }
-
-  .item-bar2 {
-    width: 10px;
-  }
-
-  .item-bar2-active {
-    width: 35px;
-  }
 }
 
 /* iphone mini size */
 @media (max-width: 400px) {
 
-  /* ----- section1 ----- */
-  .Text {
-    top: calc(100vh - 50vh - 220px);
-  }
-
-  .project-since {
-    display: none;
-  }
-
-  .project-since-bars {
-    display: none;
-  }
 }

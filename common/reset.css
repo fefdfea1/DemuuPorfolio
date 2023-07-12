@@ -282,7 +282,8 @@ body::-webkit-scrollbar-track {
   margin: auto;
   top: 0px;
   bottom: 0px;
-  background: #000;
+  background: #bdbdbd;
+  mix-blend-mode: difference;
   border-radius: 2px;
   -webkit-transition: all 200ms ease-out;
   -moz-transition: all 200ms ease-out;
