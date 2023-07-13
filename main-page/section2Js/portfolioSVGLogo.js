@@ -28,7 +28,7 @@ function createParticles() {
     p.setAttribute('class', "particle");
 
     const val = randomBetween(10, 50) / 10;
-    const origin = randomBetween(40, 60) + '% ' + randomBetween(40, 60) + '%';
+    // const origin = randomBetween(40, 60) + '% ' + randomBetween(40, 60) + '%';
     TweenMax.set(p, {
       scale: val,
       transformOrigin: '50% 50%'
