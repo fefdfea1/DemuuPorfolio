@@ -11,6 +11,9 @@ import {portfolioLogo} from "./section2Js/portfolioSVGLogo.js";
 import {section2Animation} from "./section2Js/section2Entry.js";
 import {sec2DownArrow} from "./section2Js/sec2DownArrow.js";
 
+// section3
+import {section3Entry} from "./section3/section3.js";
+
 
 const init = () => {
   initCaroselUl();
@@ -20,5 +23,6 @@ const init = () => {
   section2Animation();
   cursorAction();
   sec2DownArrow();
+  section3Entry();
 };
 init();
