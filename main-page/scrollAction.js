@@ -132,9 +132,12 @@ export const scrollAction = () => {
 // 현재 스크롤 위치와 구하기
 function getScrollPosition() {
   let scrollPosition = Math.floor(window.scrollY || document.documentElement.scrollTop);
+  
+  // section2 position
   let section2Top = Math.floor(window.scrollY + document.querySelector("#section2").getBoundingClientRect().top);
+  // section3 position
   let section3Top = Math.floor(window.scrollY + document.querySelector("#section3").getBoundingClientRect().top);
-  section2Animation(scrollPosition, section2Top);
+  section2Animation(scrollPosition);
 
   if (!timeId) {
     timeId = setTimeout(() => {
@@ -187,8 +190,10 @@ function getScrollPosition() {
           document.body.removeChild(findSection3CDN);
         }
       }
-    }, 1);
+    }, 10);
   }
 }
+
 getScrollPosition();
+
 window.addEventListener("scroll", getScrollPosition);

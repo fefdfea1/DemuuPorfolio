@@ -19,24 +19,29 @@ body {
   color: #212121;
 }
 
+.my-explanation {
+  font-weight: 700;
+  text-align: center;
+  line-height: 24px;
+  padding-top: 3vh;
+}
+
 .introduce-menu {
-  margin-top: 100px;
+  padding-top: 6vh;
   font-size: 18px;
   font-weight: 600;
   text-align: center;
+  margin: 0 auto;
 }
 
-.menu-upper, .menu-lower {
-  display: inline-block;
-}
-
-.email, .phone, .github, .blog {
+.introduce-menu .github,.introduce-menu .blog {
   display: inline-block;
   padding: 0 20px;
 }
 
-.introduce-menu div p {
-  padding: 5px 0;
+.introduce-menu .blog img {
+  width: 20px;
+  vertical-align: middle;
 }
 
 .introduce-menu a:hover {
@@ -151,6 +156,252 @@ body {
   width: 50%;
 }
 
+/* ----- footer ----- */
+.footer-bx {
+  margin-top: 8vh;
+  height: 130px;
+  border-top: solid 2px rgba(0, 0, 0, .2)
+}
+.footer-contact {
+  padding-top: 2vh;
+  text-align: center;
+  font-weight: 700;
+}
+.footer-blog {padding-right: 1%;}
+.footer-blog img {
+  width: 1.6vw;
+  vertical-align: middle;
+}
+.footer-github i {
+  font-size: 1.2vw;
+  vertical-align: middle;
+}
+.footer-contact .footer-phone {
+  padding-top: 2vh;
+}
+.footer-contact p {
+  font-size: 0.8vw;
+  padding-bottom: 4px;
+}
+.footer-contact p i {
+  padding-right: 10px;
+  padding-bottom: 4px;
+}
+
+/* ----- send-mail ----- */
+.contact-btn i {
+  color: #000;
+  font-size: 1.5em;
+  padding-top: 10px;
+}
+
+.contact-btn {
+  cursor: pointer;
+  position: fixed;
+  right: 4vw;
+  bottom: 6vh;
+  background-color: #fff;
+  color: #666;
+  border: 2px solid #666;
+  line-height: normal;
+  border-radius: 6px;
+  transition: all .2s ease;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+}
+
+.contact-btn::after {
+  content: "";
+  display: block;
+  height: 7px;
+  width: 100%;
+  background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-top: 1px solid #666;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-size: 7px 7px;
+}
+
+.contact-btn:hover {
+  border-color: #000;
+  color: #000;
+  font-weight: 600;
+  transform: scale(1.2, 1.2);
+}
+.contact-btn:hover::after {
+  background-image: repeating-linear-gradient(45deg, #000, #000 1px, transparent 2px, transparent 5px);
+  border-top: 1px solid #000;
+  -webkit-animation: stripe-slide 12s infinite linear forwards;
+          animation: stripe-slide 12s infinite linear forwards;
+}
+
+@-webkit-keyframes stripe-slide {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+@keyframes stripe-slide {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+
+.send-mail {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 60vw;
+  width: 60vw;
+  height: 80vh;
+  background-color: #212121;
+  color: #fff;
+  border-radius: 15px;
+  transition: all .6s;
+}
+
+.send-mail h2 {
+  padding: 5% 0 1% 5%;
+  font-size: 1.5vw;
+}
+
+.send-mail div {
+  width: 100%;
+  padding: 25px 0 25px 5%;
+}
+
+.send-mail p {
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.send-mail span {
+  font-size: 14px;
+  padding-left: 8px;
+  color: red;
+  display: none;
+}
+
+.send-mail input {
+  background-color: #424242;
+  border: 1px solid #9e9e9e;
+  width: 15vw;
+  height: 5vh;
+  border-radius: 5px;
+  color: #fff;
+  padding-left: 3%;
+  display: block;
+}
+.send-mail input::placeholder {
+  color: #eeeeee;
+  opacity: .6;
+}
+
+.send-mail textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: none;
+  background-color: #424242;
+  border: 1px solid #9e9e9e;
+  border-radius: 5px;
+  width: 28vw;
+  height: 18vh;
+  color: #fff;
+  padding: 2%;
+  display: block;
+}
+.send-mail textarea::placeholder {
+  color: #eeeeee;
+  opacity: .6;
+}
+
+.send-mailBtn {
+  position: relative;
+}
+.send-mailBtn button {
+  --y: 0px;
+  --rocate: 0deg;
+  position: relative;
+  padding: 10px 30px 10px 30px;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 27px;
+  transform-style: preserve-3d;
+  transform: translateY(var(--y)) rotateX(var(--rocate));
+  transition: all .3s;
+}
+.send-mailBtn button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  background-color: #fff;
+  height: 4px;
+  border-radius: 2px;
+  display: block;
+  transform-origin: 0 100%;
+  transform: rotateX(-90deg);
+  transition: .3;
+}
+
+.send-mailBtn i {
+  position: absolute;
+  bottom: 30px;
+  left: 5%;
+  font-size: 2vw;
+  transition: all 1.5s;
+  opacity: 0;
+  color: #fff;
+}
+
+.send-mail .my-information {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0,-50%);
+  width: 30%;
+  border-left: 1px solid rgba(255, 255, 255, .5);
+}
+.reimg {
+  width: 10vw;
+}
+.send-mail .my-information h5 {
+  padding-bottom: 8px;
+}
+.send-mail .my-information p {
+  font-size: 14px;
+}
+.information-blog img {
+  width: 25px;
+}
+.information-social i {
+  padding-top: 5px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.send-mail .x-btn {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  font-size: 26px;
+  cursor: pointer;
+}
+
 
 @media (max-width: 1200px) {
   /* ----- section1 ----- */
@@ -181,9 +432,7 @@ body {
   .experience-menu {margin-left: 0;}
 
   .experience-content {margin-left: 0;}
-
 }
-
 
 @media (max-width: 992px) {
   /* ----- section1 ----- */

@@ -2,12 +2,14 @@ const hamburgermenu = () => {
   
   const click = ('ontouchstart' in window) ? 'touchstart' : 'click';
 
-document.querySelector('div.burger').addEventListener(click, function() {
-  if (!this.classList.contains('open')) {
-    openMenu();
-  } else {
-    closeMenu();
-  }
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelector('div.burger').addEventListener(click, function() {
+    if (!this.classList.contains('open')) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
+  });
 });
 
 function openMenu() {

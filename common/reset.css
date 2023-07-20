@@ -161,7 +161,8 @@ a {
 h1,
 h2,
 h3,
-h4 {
+h4,
+button {
   font-family: 'Secular One', sans-serif;
 }
 
@@ -169,7 +170,9 @@ p,
 a,
 div,
 span,
-h5 {
+h5,
+input,
+textarea {
   font-family: 'NanumSquare';
 }
 
@@ -177,6 +180,23 @@ ul {
   list-style: none;
 }
 
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+input {
+  box-shadow: none;
+  border: none;
+  -webkit-appearance:none;
+  -moz-appearance: none;
+  -o-appearance:none;
+  appearance: none;
+}
 
 .clearfix:before,
 .clearfix:after {
@@ -495,7 +515,7 @@ div.rotate135 {
 
 
 /* -------------- footer ---------- */
-.footer-bx {
+/* .footer-bx {
   width: 100vw;
   height: 80px;
   background-color: #212121;
@@ -510,7 +530,7 @@ div.rotate135 {
 
 .copyright a {
   color: #fff;
-}
+} */
 
 
 

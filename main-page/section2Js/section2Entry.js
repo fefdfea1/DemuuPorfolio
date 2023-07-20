@@ -1,11 +1,8 @@
 export const section2Animation = (() => {
   let hasRun = true;
 
-  // section2 위치 값
-  let section2 = document.querySelector("#section2");
-  let section2Top = window.scrollY + section2.getBoundingClientRect().top;
-
   return (scrollPosition) => {
+    console.log("scrollpos : " + scrollPosition)
     const portfolioLogo = document.querySelector(".portfolio-logo");
     const portfolioName = document.querySelector(".portfolio-logo-name");
     const triangle = document.querySelector(".triangle");
@@ -16,9 +13,13 @@ export const section2Animation = (() => {
 
     const arrow = document.querySelector(".portfolio-arrow");
 
-    if (scrollPosition === Math.floor(section2Top) && hasRun) {
-      hasRun = false;
+    // section2 position
+    let section2Top = Math.floor(window.scrollY + document.querySelector("#section2").getBoundingClientRect().top);
 
+    if (scrollPosition === section2Top && hasRun) {
+      hasRun = false;
+      console.log("작동중!!")
+      console.log("section2 : " + section2Top)
       if (window.innerWidth > 768) {
         setTimeout(() => {
           triangle.style.display = "block";

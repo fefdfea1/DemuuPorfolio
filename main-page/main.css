@@ -3,7 +3,6 @@
 
 * {
   cursor: none;
-  font-family: "Montserrat", sans-serif;
 }
 
 .custom-cursor {
@@ -474,14 +473,10 @@ section {
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  font-family: "Secular One", sans-serif;
   color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
-}
-
-.sec3-container {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -493,6 +488,7 @@ section {
   -webkit-perspective: 900px;
   perspective: 900px;
   visibility: hidden;
+  height: 600px;
 }
 
 .hi {
@@ -579,8 +575,7 @@ section {
   margin: 0;
   -webkit-transform: translateY(-5px);
   transform: translateY(-5px);
-}
-.hi__word {
+  font-family: "Secular One", sans-serif;
   padding-top: 3.5%;
 }
 
