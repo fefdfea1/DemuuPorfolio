@@ -2,14 +2,12 @@ const hamburgermenu = () => {
   
   const click = ('ontouchstart' in window) ? 'touchstart' : 'click';
 
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelector('div.burger').addEventListener(click, function() {
-    if (!this.classList.contains('open')) {
-      openMenu();
-    } else {
-      closeMenu();
-    }
-  });
+document.querySelector('div.burger').addEventListener(click, function() {
+  if (!this.classList.contains('open')) {
+    openMenu();
+  } else {
+    closeMenu();
+  }
 });
 
 function openMenu() {
@@ -18,9 +16,11 @@ function openMenu() {
   const elements = document.querySelectorAll('div.x, div.y, div.z');
   const menuItems = document.querySelectorAll('.menu2-menus li');
   const body = document.querySelector('body');
+  const menu2 = document.querySelector('.menu2-menus');
 
   body.style.overflow = "hidden";
   body.style.touchAction = "none";
+  menu2.style.display = "block";
 
   circle.classList.add('expand');
   burger.classList.add('open');
@@ -50,9 +50,11 @@ function closeMenu() {
   const circle = document.querySelector('div.circle');
   const menuItems = document.querySelectorAll('.menu2-menus li');
   const body = document.querySelector('body');
+  const menu2 = document.querySelector('.menu2-menus');
 
   body.style.overflow = "";
   body.style.touchAction = "auto";
+  menu2.style.display = "none";
 
   burger.classList.remove('open');
   x.classList.remove('rotate45');

@@ -1,7 +1,7 @@
 const xmlns = "http://www.w3.org/2000/svg";
 const xlinkns = "http://www.w3.org/1999/xlink";
 
-select = function (s) {
+const select = function (s) {
   return document.querySelector(s);
 };
 
@@ -68,7 +68,11 @@ function randomBetween(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-createParticles();
+// createParticles();
+
+export const portfolioLogo = () => {
+  createParticles();
+};
 
 TweenMax.set("#wholeLogo", {
   x: 40,

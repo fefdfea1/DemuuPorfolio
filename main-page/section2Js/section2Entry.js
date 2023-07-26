@@ -18,8 +18,6 @@ export const section2Animation = (() => {
 
     if (scrollPosition === section2Top && hasRun) {
       hasRun = false;
-      console.log("작동중!!")
-      console.log("section2 : " + section2Top)
       if (window.innerWidth > 768) {
         setTimeout(() => {
           triangle.style.display = "block";
