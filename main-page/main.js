@@ -12,6 +12,7 @@ import { sec2DownArrow } from "./section2Js/sec2DownArrow.js";
 import {portfolioLogo} from "./section2Js/portfolioSVGLogo.js";
 
 // section3
+import { section3Intro } from "./section3/section3.js";
 
 
 const init = () => {
@@ -22,5 +23,6 @@ const init = () => {
   cursorAction();
   sec2DownArrow();
   portfolioLogo();
+  section3Intro();
 };
 init();

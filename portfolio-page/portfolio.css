@@ -1350,6 +1350,10 @@ footer {
     
   }
 
+  .send-mailBtn button {
+    font-size: 12px;
+  }
+  
   .send-mailBtn i {
     font-size: 6vw;
   }

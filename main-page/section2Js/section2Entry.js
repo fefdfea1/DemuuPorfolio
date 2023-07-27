@@ -2,7 +2,6 @@ export const section2Animation = (() => {
   let hasRun = true;
 
   return (scrollPosition) => {
-    console.log("scrollpos : " + scrollPosition)
     const portfolioLogo = document.querySelector(".portfolio-logo");
     const portfolioName = document.querySelector(".portfolio-logo-name");
     const triangle = document.querySelector(".triangle");

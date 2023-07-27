@@ -1,5 +1,4 @@
 @import url("../common/reset.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 
 * {
   cursor: none;
@@ -439,192 +438,171 @@ section {
 }
 
 
-
-
 /* ---------- section3 ---------- */
-#section3 {
-  /* position: absolute; */
-  background: black;
-  font-family: "Montserrat", sans-serif;
-  font-size: 90px;
-  /* z-index: -2; */
-}
-
-#sec3-svg {
-  /* display: none; */
-  /* position: fixed; */
-  /* bottom: 0; */
-  /* left: 0; */
-}
-
-#sec3-wave {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  width: 100%;
-  z-index: -1;
-}
-
-.sec3-container {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  color: white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-perspective: 900px;
-  perspective: 900px;
-  visibility: hidden;
-  height: 600px;
-}
-
-.hi {
-  position: relative;
-  z-index: 1;
-  font-size: 100px;
-  font-stretch: 400%;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  text-align: center;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-.hi__cuboid {
-  position: relative;
-  width: 500px;
-  height: 70px;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  margin: 30px 0;
-}
-.hi__cuboid .face {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: #000;
-}
-.hi__cuboid .face--front {
-  width: 500px;
-  height: 70px;
-  -webkit-transform: translateZ(calc(70px / 2));
-  transform: translateZ(calc(70px / 2));
-}
-.hi__cuboid .face--back {
-  width: 500px;
-  height: 70px;
-  -webkit-transform: translateZ(calc(70px / 2 * -1)) rotateY(180deg)
-    rotate(180deg);
-  transform: translateZ(calc(70px / 2 * -1)) rotateY(180deg) rotate(180deg);
-}
-.hi__cuboid .face--left {
-  width: 70px;
-  height: 70px;
-  -webkit-transform: translateX(calc(70px / 2 * -1)) rotateY(-90deg);
-  transform: translateX(calc(70px / 2 * -1)) rotateY(-90deg);
-}
-.hi__cuboid .face--right {
-  width: 70px;
-  height: 70px;
-  -webkit-transform: translateX(calc(500px - 70px / 2)) rotateY(90deg);
-  transform: translateX(calc(500px - 70px / 2)) rotateY(90deg);
-}
-.hi__cuboid .face--top {
-  width: 500px;
-  height: 70px;
-  -webkit-transform: translateY(calc(70px / 2 * -1)) rotateX(90deg);
-  transform: translateY(calc(70px / 2 * -1)) rotateX(90deg);
-}
-.hi__cuboid .face--bottom {
-  width: 500px;
-  height: 70px;
-  -webkit-transform: translateY(calc(70px - 70px / 2)) rotateX(-90deg);
-  transform: translateY(calc(70px - 70px / 2)) rotateX(-90deg);
-}
-
-.face {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.face.face--top,
-.face.face--bottom {
-  background: white;
-  color: #000;
-}
-
-.hi__word {
-  margin: 0;
-  -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
-  font-family: "Secular One", sans-serif;
-  padding-top: 3.5%;
-}
-
-.hi__base {
-  position: absolute;
-  z-index: 0;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 752px;
-  height: 250px;
-}
-
-.hi__base-plate {
+.section3-intro {
   width: 100%;
   height: 100%;
-  background: #000;
-  border: 1px solid #5e5d5e;
+  position: relative;
+  background-color: #fff;
 }
 
-.hi__location {
+.section3-title {
   position: absolute;
-  margin: 0;
-  font-size: 20px;
-  font-stretch: 400%;
-  font-weight: 400;
-}
-
-.hi__location--lat {
   top: 50%;
-  left: 0vw;
-  -webkit-transform: rotate(-90deg) translateX(10px);
-  transform: rotate(-90deg) translateX(10px);
+  left: 50%;
+  transform: translate(-50%, 100%) rotate(-0.003deg);
+  opacity: 0;
+  transition: all .5s ease-in;
+  color: #fff;
+  mix-blend-mode: difference;
+  z-index: 3;
+  font-size: 2.8vw;
+  font-weight: 900;
 }
 
-.hi__location--long {
+.galleryBtn {
+  position: absolute;
   top: 50%;
-  right: 0vw;
-  -webkit-transform: rotate(90deg) translateX(-10px);
-  transform: rotate(90deg) translateX(-10px);
+  left: 50%;
+  transform: translate(-50%, 100%);
+  opacity: 0;
+  transition: all .5s ease-in;
+  z-index: 3;
 }
 
-.gsap-3-logo {
-  width: 20vw;
-  max-width: 150px;
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
+.galleryBtn a {
+  position: relative;
+  display: inline-block;
+  font-size: 1vw;
+  font-weight: 600;
+  color: #000;
+  padding: 12px 0;
+}
+.galleryBtn i {vertical-align: middle;}
+
+.galleryBtn::before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  transform: scale(0);
+  transition: all .35s;
+}
+.galleryBtn:hover::before {
+  transform: scale(1);
+}
+
+
+.intro-background {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #000;
+  z-index: 2;
+}
+
+.bg-left {
+  left: 0;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: all 2s;
+}
+
+.bg-right {
+  right: 0;
+  transform-origin: right center;
+  transform: scaleX(0);
+  transition: all 2s;
+}
+
+.intro-background-white {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transition: all 1.8s;
+  transform-origin: top center;
+  transform: scaleY(1);
+}
+
+.section3-images {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image-grid {
+  pointer-events: none;
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  display: grid;
+  grid-template-columns: repeat(50, 2%);
+  grid-template-rows: repeat(50, 2%);
+  overflow: hidden;
+}
+
+.image-grid__item {
+  opacity: 1;
+  position: relative;
+}
+
+.image-grid img {
+  will-change: transform;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pos-1 {
+  grid-area: 10 / 1 / 36 / 8;
+}
+
+.pos-2 {
+  grid-area: 1 / 21 / 17 / 30;
+}
+
+.pos-3 {
+  grid-area: 1 / 36 / 14 / 42;
+}
+
+.pos-4 {
+  grid-area: 10 / 10 / 32 / 17;
+}
+
+.pos-5 {
+  grid-area: 20 / 35 / 35 / 45;
+}
+
+.pos-6 {
+  grid-area: 20 / 46 / 28 / 51;
+}
+
+.pos-7 {
+  grid-area: 43 / 1 / 51 / 10;
+}
+
+.pos-8 {
+  grid-area: 38 / 14 / 51 / 19;
+}
+
+.pos-9 {
+  grid-area: 40 / 26 / 51 / 32;
+}
+
+.pos-10 {
+  grid-area: 37 / 39 / 48 / 47;
 }
 
 /* ---------------------- MEDIA ------------------------ */
@@ -867,10 +845,10 @@ section {
   * {
     cursor: auto;
   }
-  section {
+  /* section {
     width: 100%;
     height: 100%;
-  }
+  } */
 
   /* ----- header ----- */
   header {

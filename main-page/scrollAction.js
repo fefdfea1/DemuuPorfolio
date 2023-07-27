@@ -1,7 +1,14 @@
 import { section2Animation } from "./section2Js/section2Entry.js";
+import { section3Intro } from "./section3/section3.js";
 
 let timer;
 function scroll() {
+  window.addEventListener("scroll", ()=> {
+    let scrollPosition = Math.floor(window.scrollY || document.documentElement.scrollTop);
+    section2Animation(scrollPosition);
+    section3Intro(scrollPosition);  
+  });
+
   window.onload = () => {
     const sections = document.querySelectorAll(".section");
     const sectionCount = sections.length;
@@ -127,52 +134,3 @@ function scroll() {
 export const scrollAction = () => {
   scroll();
 };
-
-// main index.html의 section2와 section3 의 cdn 충돌로 인해 section 마다 cdn 교체
-let timeId;
-const mainJs = document.querySelector('script[src="./main.js"]');
-// 현재 스크롤 위치와 구하기
-function getScrollPosition() {
-  let scrollPosition = Math.floor(window.scrollY || document.documentElement.scrollTop);
-  
-  // section3 position
-  let section3Top = Math.floor(window.scrollY + document.querySelector("#section3").getBoundingClientRect().top);
-  section2Animation(scrollPosition);
-
-  if (!timeId) {
-    timeId = setTimeout(() => {
-      timeId = null;
-      if (scrollPosition === section3Top) {
-        const section3CDN = document.createElement("script");
-        const section3Script = document.createElement("script");
-        section3Script.src = `./section3/section3.js`;
-        // section3Script.type = "module";
-        section3CDN.src = `https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js`;
-        mainJs.after(section3CDN);
-        mainJs.after(section3Script);
-      } else {
-        const findSection3Script = document.querySelector(
-          'script[src="./section3/section3.js"]'
-        );
-        const findSection3CDN = document.querySelector(
-          'script[src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"]'
-        );
-
-        if (findSection3Script !== null && findSection3CDN) {
-          document.body.removeChild(findSection3Script);
-          document.body.removeChild(findSection3CDN);
-        }
-      }
-    }, 10);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  getScrollPosition();
-});
-window.addEventListener("scroll", getScrollPosition);
-
-// window.addEventListener('load',() => {
-//   getScrollPosition();
-//   window.addEventListener("scroll", getScrollPosition);
-// });
