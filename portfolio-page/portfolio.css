@@ -6,6 +6,50 @@ body {
   overflow-x: hidden;
 }
 
+
+/* -------------------loading-screen------------------- */
+.loading-screen {
+  font-family: 'Syncopate', sans-serif;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  font-size: 4em;
+  letter-spacing: 6px;
+  color: #fff;
+  text-align: center;
+  transition: all .6s;
+  opacity: 1;
+  z-index: 10;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+  .loading-screen {
+    font-size: 3.5em;
+  }
+}
+@media (max-width: 992px) {
+  .loading-screen {
+    font-size: 3em;
+    letter-spacing: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .loading-screen {
+    font-size: 2.5em;
+    letter-spacing: 4px;
+  }
+}
+@media (max-width: 576px) {
+  .loading-screen {
+    font-size: 1.5em;
+    letter-spacing: 3px;
+  }
+}
+
 /* ----- section1 ----- */
 #my-introduce {
   padding-top: 200px;

@@ -1,5 +1,6 @@
 import { section2Animation } from "./section2Js/section2Entry.js";
-import { section3Intro } from "./section3/section3.js";
+import { section3Intro } from "./section3Js/section3.js";
+import { tubeIntro } from "./section4Js/tubeIntro.js";
 
 let timer;
 function scroll() {
@@ -7,6 +8,7 @@ function scroll() {
     let scrollPosition = Math.floor(window.scrollY || document.documentElement.scrollTop);
     section2Animation(scrollPosition);
     section3Intro(scrollPosition);  
+    tubeIntro(scrollPosition);  
   });
 
   window.onload = () => {

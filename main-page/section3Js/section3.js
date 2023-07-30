@@ -7,6 +7,7 @@ export const section3Intro = (() => {
     const introBackground2 = document.querySelector('.bg-right');
     const introWhiteBackground = document.querySelector('.intro-background-white');
     const lookingAroundBtn = document.querySelector('.galleryBtn');
+    const arrowBx = document.querySelector('.section3-down-arrow');
 
     // section3 position
     let section3Top = Math.floor(window.scrollY + document.querySelector("#section3").getBoundingClientRect().top);
@@ -44,10 +45,13 @@ export const section3Intro = (() => {
   
                     setTimeout(() => {
                       lookingAroundBtn.style.opacity = '1';
+
+                      setTimeout(() => {
+                        arrowBx.style.opacity = '1';
+                      },1000)
                     },1000)
                   },400)
                 },1000)
-  
               },600)
             },700)
           }, 300)
@@ -55,7 +59,7 @@ export const section3Intro = (() => {
       },500);
   
   
-      const images = [...document.querySelectorAll("img")];
+      const images = [...document.querySelectorAll(".section3-images img")];
   
       function lerp(a, b, n) {
         return (1 - n) * a + n * b;
