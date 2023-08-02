@@ -19,11 +19,24 @@ export const tubeIntro = (() => {
               pathValue -= 5;
               path.style.strokeDashoffset = pathValue;
               
-              if(pathValue <= 0) clearInterval(interval);
+              console.log(pathValue);
+              if(pathValue <= 30) clearInterval(interval);
             },16);
           });
         
-          tubeIntroSVG.style.transform = 'translateY(-82%)';
+          if (window.innerWidth > 1400) {
+            tubeIntroSVG.style.transform = 'translateY(-82%)';
+          } else if (window.innerWidth > 1200) {
+            tubeIntroSVG.style.transform = 'translateY(-74%)';
+          } else if (window.innerWidth > 992) {
+            tubeIntroSVG.style.transform = 'translateY(-70%)';
+          } else if (window.innerWidth > 768) {
+            tubeIntroSVG.style.transform = 'translateY(-60%)';
+          } else if (window.innerWidth > 576) {
+            tubeIntroSVG.style.transform = 'translateY(-48%)';
+          } else {
+            tubeIntroSVG.style.transform = 'translateY(-40%)';
+          }
         },50)
       };
       section4Animate();

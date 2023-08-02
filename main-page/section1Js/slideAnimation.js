@@ -121,5 +121,7 @@ const autoPlay = (time) => {
 };
 
 export const initCaroselUl = () => {
-  createCopy();
+  if(window.innerWidth > 768) {
+    createCopy();
+  }
 };

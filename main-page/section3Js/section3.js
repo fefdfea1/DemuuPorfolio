@@ -56,7 +56,7 @@ export const section3Intro = (() => {
             },700)
           }, 300)
         }, 1000);
-      },500);
+      },100);
   
   
       const images = [...document.querySelectorAll(".section3-images img")];

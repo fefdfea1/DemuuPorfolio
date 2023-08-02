@@ -35,9 +35,22 @@ function cursor (){
   function custom_unhover_cursor(e) {
     custom_cursor.classList.remove('custom_cursor_hover');
   }
-  document.querySelectorAll('a,p,span,h1,h2,h3,h4,h5').forEach(item => {
+  document.querySelectorAll('p,span,h1,h2,h3,h4,h5').forEach(item => {
     item.addEventListener('mouseover', custom_hover_cursor);
     item.addEventListener('mouseleave', custom_unhover_cursor);
+  })
+
+
+  function custom_hover_cursor2(e) {
+    custom_cursor.classList.add('custom_cursor_hover2');
+  }
+
+  function custom_unhover_cursor2(e) {
+    custom_cursor.classList.remove('custom_cursor_hover2');
+  }
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('mouseover', custom_hover_cursor2);
+    item.addEventListener('mouseleave', custom_unhover_cursor2);
   })
   // document.querySelectorAll('input').forEach(item => {
   //   item.addEventListener('mouseover', custom_hover_cursor);

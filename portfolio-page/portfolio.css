@@ -9,20 +9,41 @@ body {
 
 /* -------------------loading-screen------------------- */
 .loading-screen {
-  font-family: 'Syncopate', sans-serif;
   position: fixed;
   width: 100vw;
   height: 100vh;
   font-size: 4em;
   letter-spacing: 6px;
-  color: #fff;
   text-align: center;
   transition: all .6s;
   opacity: 1;
   z-index: 10;
+  background-color: #000;
+  color: #fff;
+  font-size: 4vw;
 }
 
-
+.loading-screen .txt-bx {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading-screen .txt-bx h2 { 
+  display: inline-block;
+  margin-left: 0.6rem;
+}
+.loading-screen .txt-bx h2::after {
+  content: '';
+  margin-left: 0.4rem;
+  border-right: 2px solid #e0e0e0;
+  animation: cursor .9s infinite steps(2);
+}
+@keyframes cursor {
+  from { border-right: 2px solid #000; }
+  to { border-right: 2px solid #e0e0e0; }
+}
 
 
 
@@ -221,7 +242,7 @@ body {
 }
 
 .experience-content {
-  margin-left: 5%;
+  margin-left: 2%;
 }
 
 .experience-content h5 {
@@ -421,7 +442,7 @@ footer {
 
 .footer-bx {
   margin-top: 8vh;
-  height: 130px;
+  height: 110px;
   border-top: solid 2px rgba(0, 0, 0, .2)
 }
 
@@ -445,7 +466,7 @@ footer {
   vertical-align: middle;
 }
 
-.footer-contact .footer-phone {
+.footer-contact .footer-email {
   padding-top: 2vh;
 }
 
@@ -703,7 +724,7 @@ footer {
 
   /* ----- footer ----- */
   .footer-bx {
-    height: 120px;
+    height: 100px;
   }
 
   .footer-blog img {
@@ -1376,30 +1397,31 @@ footer {
   }
 
   .send-mail {
-    width: 100vw;
-    border-radius: 12px 12px 0 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
   }
 
   .send-mail h2 {
-    font-size: 5vw;
+    font-size: 6vw;
   }
 
   .send-mail input {
     width: 70vw;
-    height: 3.5vh;
+    height: 5vh;
   }
 
   .send-mail textarea {
     width: 80vw;
-    
+    height: 34vh;
   }
 
   .send-mailBtn button {
-    font-size: 12px;
+    font-size: 14px;
   }
   
   .send-mailBtn i {
-    font-size: 6vw;
+    font-size: 8vw;
   }
 
   .send-mail .my-information {

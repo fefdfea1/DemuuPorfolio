@@ -15,7 +15,7 @@ export const section2Animation = (() => {
     // section2 position
     let section2Top = Math.floor(window.scrollY + document.querySelector("#section2").getBoundingClientRect().top);
 
-    if (scrollPosition === section2Top && hasRun) {
+    if (scrollPosition === section2Top && hasRun || window.innerWidth <= 768 && hasRun) {
       hasRun = false;
       if (window.innerWidth > 768) {
         setTimeout(() => {

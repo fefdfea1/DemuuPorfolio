@@ -68,11 +68,7 @@ function SendMailClick(){
   
   contactBtn.addEventListener('click', function(){
     if(click){
-      if (window.innerWidth > 440) {
-        sendMail.style.transform = 'translate(-50%, -50%)';
-      } else if (window.innerWidth <= 440) {
-        sendMail.style.transform = 'translate(-50%, -32%)';
-      }
+      sendMail.style.transform = 'translate(-50%, -50%)';
       click = false;
     } else {
       sendMail.style.transform = 'translate(-50%, 100%)';

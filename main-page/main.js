@@ -18,6 +18,10 @@ import { sec3DownArrow } from "./section3Js/sec3DownArrow.js";
 // section4
 import { tubeIntro } from "./section4Js/tubeIntro.js";
 
+// section5
+import { section5Canvas } from "./section5Js/blackBxCanvas.js";
+import { section5Canvas2 } from "./section5Js/whiteBxCanvas.js";
+
 
 const init = () => {
   // all
@@ -39,5 +43,9 @@ const init = () => {
 
   // section4
   tubeIntro();
+
+  // section5
+  section5Canvas();
+  section5Canvas2();
 };
 init();

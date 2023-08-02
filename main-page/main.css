@@ -62,6 +62,9 @@
 .custom-cursor.custom_cursor_hover .custom-cursor-icon {
   transform: scale(2);
 }
+.custom-cursor.custom_cursor_hover2 .custom-cursor-icon {
+  transform: scale(.6);
+}
 
 /* ------------- banner animation ----------- */
 
@@ -95,7 +98,7 @@ section {
 .container {
   height: calc(100vh - 220px);
   padding-top: 100px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .carosel {
@@ -146,7 +149,7 @@ section {
 }
 
 .Text a {
-  font-family: "Secular One", sans-serif;
+  font-family: 'Nanum';
 }
 
 .text1 {
@@ -317,11 +320,13 @@ section {
 .portfolio-shortcut {
   position: relative;
   z-index: -1;
+  width: 100vw;
+  height: 100vh;
 }
 
 .portfolio-logo {
   position: relative;
-  width: 100%; /*<- 이고 */
+  width: 100%;
   height: 100vh;
   transition: all 1.2s;
   background-color: #fff;
@@ -335,7 +340,7 @@ section {
 }
 
 .portfolio-logo-name {
-  opacity: 0; /*<- 이고 */
+  opacity: 0;
   position: absolute;
   left: 8%;
   bottom: 50%;
@@ -345,7 +350,7 @@ section {
 }
 
 .triangle {
-  display: none; /*<- 이고 */
+  display: none;
   position: absolute;
   top: 0;
   right: -150px;
@@ -415,10 +420,14 @@ section {
   position: absolute;
   right: 6%;
   bottom: 5%;
+  vertical-align: middle;
 }
 .portfolio-arrow a {
   font-size: 20px;
   color: #fff;
+}
+.portfolio-arrow i {
+  vertical-align: middle;
 }
 
 .section2-down-arrow {
@@ -624,7 +633,6 @@ section {
 
 
 /* ---------- section4 ---------- */
-
 .section4-container {
   position: relative;
   width: 100vw;
@@ -718,7 +726,154 @@ section {
   }
 }
 
+/* ---------- section5 ---------- */
+#section5 {
+  position: relative;
+  overflow: hidden;
+}
 
+.black-bx {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  background-color: #000;
+  color: #fff;
+}
+.white-bx {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  background-color: #fff;
+  color: #000;
+}
+
+.blak-title-bx {
+  position: absolute;
+  width: 80%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+.black-title {
+  font-size: 11vw;
+  font-weight: 900;
+  padding-left: 10%;
+}
+
+.white-title-bx {
+  position: absolute;
+  width: 80%;
+  text-align: right;
+  top: 0;
+  right: 50%;
+  transform: translate(50%, -25%);
+}
+.white-title {
+  font-size: 11vw;
+  font-weight: 900;
+  padding-right: 10%;
+}
+.sub-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1vw;
+  margin-top: 40px;
+}
+
+#wb-canvas {
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+}
+#demo-canvas {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.section5-txts-black {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30vw;
+  height: 50vh;
+  color: #fff;
+}
+.section5-txts-black h5:nth-child(1) {
+  margin-top: 20%;
+  font-size: 22px;
+}
+.section5-txts-black h5:nth-child(2) {
+  margin-top: 18%;
+  font-size: 20px;
+}
+.section5-txts-black p:nth-child(3) {
+  margin-top: 8%;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+.section5-txts-black p:nth-child(4) {
+  font-size: 16px;
+  letter-spacing: 10px;
+}
+
+
+.section5-txts-white {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30vw;
+  height: 50vh;
+}
+.section5-txts-white h5 {
+  font-size: 20px;
+  padding-bottom: 6px;
+  font-weight: 600;
+}
+
+.tw-1 {
+  margin-top: 24%;
+}
+.tw-1 i {
+  font-size: 20px;
+  vertical-align: middle;
+  padding-right: 4px;
+}
+.tw-1 img {
+  vertical-align: middle;
+  width: 20px;
+}
+
+
+.tw-2 {
+  margin-top: 6%;
+}
+.tw-2 i {
+  font-size: 20px;
+  vertical-align: middle;
+  padding-right: 4px;
+}
+.tw-2 img {
+  vertical-align: middle;
+  width: 20px;
+  padding-right: 4px;
+}
+
+.tw-3 {
+  margin-top: 6%;
+  font-size: 16px;
+}
+.tw-3 p:hover {
+  text-decoration: underline;
+}
+
+.tw-4 {
+  margin-top: 6%;
+}
+.tw-4 p {
+  font-size: 14px;
+}
 
 
 /* ---------------------- MEDIA ------------------------ */
@@ -730,7 +885,7 @@ section {
 
   /* ----- section1 ----- */
   .container {
-    padding-top: 170px;
+    padding-top: 170px; 
   }
 
   .Text {
@@ -795,6 +950,11 @@ section {
   .portfolio-arrow a {
     font-size: 16px;
   }
+
+  /* ----- section5 ----- */
+  .tw-1 {
+    margin-top: 28%;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -804,6 +964,13 @@ section {
   }
 
   /* ----- section1 ----- */
+  .img-bx {
+    width: 40%;
+  }
+  
+  .img-bx.widthUp {
+    width: 45%;
+  }
   .Text {
     height: 300px;
   }
@@ -874,6 +1041,116 @@ section {
   .portfolio-arrow a {
     font-size: 14px;
   }
+
+  /* ----- section3 ----- */
+  .section3-title {
+    font-size: 3.2vw;
+  }
+  .galleryBtn a {
+    font-size: 1.5vw;
+  }
+
+  .pos-1 {
+    grid-area: 10 / 1 / 30 / 8;
+  }
+  .pos-2 {
+    grid-area: 1 / 22 / 15 / 30;
+  }
+  .pos-3 {
+    grid-area: 1 / 36 / 10 / 42;
+  }
+  .pos-4 {
+    grid-area: 10 / 10 / 26 / 17;
+  }
+  .pos-5 {
+    grid-area: 22 / 36 / 35 / 45;
+  }
+  .pos-6 {
+    grid-area: 20 / 47 / 28 / 51;
+  }
+  .pos-7 {
+    grid-area: 43 / 1 / 50 / 9;
+  }
+  .pos-8 {
+    grid-area: 38 / 12 / 50 / 19;
+  }
+  .pos-9 {
+    grid-area: 40 / 27 / 50 / 32;
+  }
+  .pos-10 {
+    grid-area: 37 / 40 / 47 / 47;
+  }
+  
+  /* ----- section4 ----- */
+  .blog-title h2 {
+    font-size: 5em;
+    text-shadow: 0 0 5px rgba(255,255,255,.5);
+  }
+  .spin-bx img {
+    width: 100px;
+    height: 100px;
+  }
+  .spin-bx p {
+    font-size: 24px;
+  }
+
+  /* ----- section5 ----- */
+  .sub-title {
+    font-size: 1.2vw;
+  }
+
+  .section5-txts-black h5:nth-child(1) {
+    margin-top: 30%;
+    font-size: 20px;
+  }
+  .section5-txts-black h5:nth-child(2) {
+    margin-top: 24%;
+    font-size: 18px;
+  }
+  .section5-txts-black p:nth-child(3) {
+    margin-top: 12%;
+    font-size: 14px;
+  }
+  .section5-txts-black p:nth-child(4) {
+    font-size: 14px;
+  }
+  
+  .section5-txts-white h5 {
+    font-size: 18px;
+  }
+  
+  .tw-1 {
+    margin-top: 32%;
+  }
+  .tw-1 i {
+    font-size: 20px;
+  }
+  .tw-1 img {
+    width: 20px;
+  }
+  
+  
+  .tw-2 {
+    margin-top: 8%;
+  }
+  .tw-2 i {
+    font-size: 20px;
+  }
+  .tw-2 img {
+    width: 20px;
+  }
+  
+  .tw-3 {
+    margin-top: 8%;
+    font-size: 14px;
+  }
+  
+  .tw-4 {
+    margin-top: 8%;
+  }
+  .tw-4 p {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -883,9 +1160,12 @@ section {
   }
 
   /* ----- section1 ----- */
+  .container {
+    padding-top: 250px;
+  }
   .Text {
     height: 200px;
-    top: calc(100vh - 50vh - 180px);
+    top: calc(100vh - 50vh - 100px);
   }
 
   .Text p {
@@ -901,7 +1181,7 @@ section {
   }
 
   .project-since {
-    top: 43%;
+    top: 52%;
   }
 
   .since-item {
@@ -925,7 +1205,7 @@ section {
   }
 
   .project-since-bars {
-    top: 43%;
+    top: 52%;
   }
 
   .since-item2 {
@@ -947,12 +1227,105 @@ section {
 
   .minor-title {
     font-size: 1.8vw;
+    line-height: 24px;
   }
   .portfolio-txt p {
     font-size: 1.5vw;
   }
   .portfolio-arrow a {
     font-size: 1.5vw;
+  }
+
+  /* ----- section3 ----- */
+  .section3-title {
+    font-size: 3.6vw;
+  }
+  .galleryBtn a {
+    font-size: 1.9vw;
+  }
+
+  .pos-1 {
+    grid-area: 10 / 1 / 28 / 8;
+  }
+  .pos-2 {
+    grid-area: 1 / 22 / 12 / 30;
+  }
+  .pos-3 {
+    grid-area: 1 / 35 / 9 / 43;
+  }
+  .pos-4 {
+    grid-area: 10 / 10 / 20 / 17;
+  }
+  .pos-5 {
+    grid-area: 22 / 35 / 32 / 46;
+  }
+  .pos-6 {
+    grid-area: 20 / 47 / 27 / 50;
+  }
+  .pos-7 {
+    grid-area: 42 / 1 / 49 / 9;
+  }
+  .pos-8 {
+    grid-area: 38 / 13 / 48 / 19;
+  }
+  .pos-9 {
+    grid-area: 40 / 25 / 49 / 32;
+  }
+  .pos-10 {
+    grid-area: 37 / 40 / 46 / 48;
+  }
+
+  /* ----- section4 ----- */
+  .blog-title h2 {
+    font-size: 4.4em;
+  }
+  .spin-bx img {
+    width: 95px;
+    height: 95px;
+  }
+  .spin-bx p {
+    font-size: 24px;
+  }
+
+  /* ----- section5 ----- */
+  .section5-txts-black h5:nth-child(1) {
+    margin-top: 50%;
+    font-size: 18px;
+  }
+  .section5-txts-black h5:nth-child(2) {
+    margin-top: 30%;
+    font-size: 16px;
+  }
+  .section5-txts-black p:nth-child(3) {
+    margin-top: 18%;
+    font-size: 12px;
+  }
+  .section5-txts-black p:nth-child(4) {
+    font-size: 12px;
+  }
+  
+  .section5-txts-white h5 {
+    font-size: 16px;
+  }
+  
+  .tw-1 {
+    margin-top: 42%;
+  }
+  
+  .tw-2 {
+    margin-top: 10%;
+  }
+  
+  .tw-3 {
+    margin-top: 10%;
+    font-size: 14px;
+  }
+  
+  .tw-4 {
+    margin-top: 10%;
+  }
+  .tw-4 p {
+    font-size: 10px;
   }
 }
 
@@ -961,10 +1334,6 @@ section {
   * {
     cursor: auto;
   }
-  /* section {
-    width: 100%;
-    height: 100%;
-  } */
 
   /* ----- header ----- */
   header {
@@ -1001,10 +1370,10 @@ section {
   }
 
   .minor-title {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   .portfolio-txt p {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
   .portfolio-arrow a {
     font-size: 3vw;
@@ -1013,10 +1382,215 @@ section {
     bottom: 10%;
     right: 10%;
   }
+
+  /* ----- section3 ----- */
+  .section3-title {
+    width: 100%;
+    text-align: center;
+    font-size: 4vw;
+  }
+  .galleryBtn a {
+    font-size: 2.3vw;
+  }
+
+  /* ----- section4 ----- */
+  .blog-title h2 {
+    font-size: 3.9em;
+  }
+
+  /* ----- section5 ----- */
+  .tube-intro svg{
+    width: 80%;
+    margin: auto;
+  }
+  .blak-title-bx {width: 100%;}
+  .black-title {
+    font-size: 16vw;
+    padding-left: 4%;
+  }
+
+  .white-title-bx {width: 100%;}
+  .white-title {
+    font-size: 16vw;
+    padding-right: 4%;
+  }
+  .sub-title {
+    margin-top: 20px;
+    font-size: 2vw;
+  }
+
+  .section5-txts-black {width: 100%;}
+  .section5-txts-black h5:nth-child(1) {display: none; }
+  .section5-txts-black h5:nth-child(2) {
+    margin: 40px 0 0 4%;
+    font-size: 18px;
+  }
+  .section5-txts-black p:nth-child(3) {
+    margin: 20px 0 0 4%;
+    font-size: 14px;
+  }
+  .section5-txts-black p:nth-child(4) {
+    margin: 0 0 0 4%;
+    font-size: 14px;
+  }
+  
+  .section5-txts-white {
+    width: 100%;
+  }
+  .section5-txts-white h5 {
+    font-size: 18px;
+  }
+  
+  .tw-1 {
+    display: none;
+  }
+  
+  .tw-2 {
+    display: none;
+  }
+  .tw-2 i {
+    font-size: 20px;
+  }
+  .tw-2 img {
+    width: 20px;
+  }
+  
+  .tw-3 {
+    position: absolute;
+    margin-top: 0;
+    font-size: 14px;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%, -4%);
+  }
+  .tw-3 h5 {display: none;}
+  .tw-3 p {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  
+  .tw-4 {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    margin-top: 0;
+    text-align: center;
+  }
+  .tw-4 p {
+    font-size: 12px;
+  }
 }
 
 /* phone size */
 @media (max-width: 576px) {
+  .minor-title {
+    font-size: 4vw;
+    margin-bottom: 60px;
+  }
+  .portfolio-txt p {
+    font-size: 3vw;
+  }
+
+  /* ----- section3 ----- */
+  .section3-title {
+    font-size: 5vw;
+  }
+  .galleryBtn a {
+    font-size: 3.3vw;
+  }
+
+  .pos-1 {
+    grid-area: 20 / 1 / 29 / 8;
+  }
+  .pos-2 {
+    grid-area: 4 / 22 / 13 / 30;
+  }
+  .pos-3 {
+    grid-area: 5 / 35 / 12 / 43;
+  }
+  .pos-4 {
+    grid-area: 11 / 10 / 18 / 18;
+  }
+  .pos-5 {
+    grid-area: 20 / 30 / 30 / 46;
+  }
+  .pos-6 {
+    display: none;
+  }
+  .pos-7 {
+    grid-area: 42 / 1 / 49 / 9;
+  }
+  .pos-8 {
+    grid-area: 40 / 23 / 48 / 19;
+  }
+  .pos-9 {
+    display: none;
+  }
+  .pos-10 {
+    grid-area: 37 / 36 / 46 / 48;
+  }
+
+  /* ----- section4 ----- */
+  .blog-title h2 {
+    font-size: 3em;
+  }
+  .spin-bx img {
+    width: 90px;
+    height: 90px;
+  }
+  .spin-bx p {
+    font-size: 20px;
+  }
+
+  /* ----- section5 ----- */
+  .sub-title {
+    font-size: 3vw;
+  }
+
+  .section5-txts-black h5:nth-child(2) {
+    font-size: 16px;
+  }
+  .section5-txts-black p:nth-child(3) {
+    font-size: 12px;
+  }
+  .section5-txts-black p:nth-child(4) {
+    font-size: 12px;
+  }
+
+  .section5-txts-white h5 {
+    font-size: 16px;
+  }
+
+  .tw-2 i {
+    font-size: 20px;
+  }
+  .tw-2 img {
+    width: 20px;
+  }
+  
+  .tw-3 {
+    width: 100%;
+    text-align: center;
+  }
+  .tw-3 h5 {display: none;}
+  .tw-3 p {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  
+  .tw-4 {
+    position: absolute;
+    bottom: 14%;
+    left: 50%;
+    transform: translate(-50%, -14%);
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .tw-4 p {
+    font-size: 12px;
+  }
 }
 
 /* iphone mini size */
