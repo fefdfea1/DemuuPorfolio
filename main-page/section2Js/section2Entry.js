@@ -15,9 +15,9 @@ export const section2Animation = (() => {
     // section2 position
     let section2Top = Math.floor(window.scrollY + document.querySelector("#section2").getBoundingClientRect().top);
 
-    if (scrollPosition === section2Top && hasRun || window.innerWidth <= 768 && hasRun) {
+    if (scrollPosition === section2Top && hasRun || window.innerWidth <= 1024 && hasRun) {
       hasRun = false;
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 1024) {
         setTimeout(() => {
           triangle.style.display = "block";
           portfolioLogo.style.width = "40%";

@@ -48,7 +48,7 @@ function whiteBxCanvas(){
       // create particles
       circles = [];
       // 원 생성 시간
-      const numOfCircles = 50;
+      const numOfCircles = 70;
       for (var x = 0; x < numOfCircles; x++) {
         var c = new Circle();
         circles.push(c);
@@ -110,8 +110,8 @@ function whiteBxCanvas(){
         _this.pos.y -= _this.velocity;
         _this.alpha -= 0.0005;
         ctx.beginPath();
-        ctx.arc(_this.pos.x, _this.pos.y, _this.scale * 10, 0, 2 * Math.PI, false);
-        ctx.fillStyle = 'rgba(0,0,0,' + _this.alpha + ')';
+        ctx.arc(_this.pos.x, _this.pos.y, _this.scale * 14, 0, 2 * Math.PI, false);
+        ctx.fillStyle = 'rgba(255,255,255,' + _this.alpha + ')';
         ctx.fill();
       };
     }

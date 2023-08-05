@@ -1,33 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <link rel="icon" href="../img/favicon.webp" type="image/x-icon" />
+  <title>Demuu Portfolio</title>
 
   <link rel="stylesheet" href="./gallery.css">
 </head>
 <body>
   
-  <div id="particles"></div>
-    <div class="background"></div>
-    <div class="title">
-      <h3>PLASM.it - 2017</h3>
-      <h1>META<span>BALLS</span></h1>
-    </div>
-    <div class="balls">
-      <svg>
-        <defs>
-          <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="12" />
-            <feColorMatrix in="blur" result="colormatrix" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" />
-            <feBlend in="SourceGraphic" in2="colormatrix" />
-          </filter>
-        </defs>
-      </svg>
-    </div>
+  <div id="loading-screen">
+    <div class="loading-intro">
+      <h5 class="loading-title">PROJECT GALLERY</h5>
+      <div class="intro-background bg-left"></div>
+      <div class="intro-background bg-right"></div>
+      <div class="intro-background-white"></div>
+  </div>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-  <script src="./loading.js"></script>
+    <div class="loading-images">
+      <div class="image-grid">
+        <div class="image-grid__item pos-1">
+          <img src="" alt="">
+        </div>
+        <div class="image-grid__item pos-2">
+          <img src="" alt="">
+        </div>
+        <div class="image-grid__item pos-3">
+          <img src="" alt="">
+        </div>
+        <div class="image-grid__item pos-4">
+          <img src="" alt="">
+        </div>
+        <div class="image-grid__item pos-5">
+          <img src="" alt="">
+        </div>
+        <div class="image-grid__item pos-6">
+          <img src="" alt="">
+        </div>
+        <div class="image-grid__item pos-7">
+          <img src="" alt="">
+        </div>
+        <div class="image-grid__item pos-8">
+          <img src="" alt="">
+        </div>
+        <div class="image-grid__item pos-9">
+          <img src="" alt="">
+        </div>
+        <div class="image-grid__item pos-10">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./gallery.js" type="module"></script>
+  
 </body>
 </html>

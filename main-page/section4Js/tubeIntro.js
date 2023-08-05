@@ -19,7 +19,6 @@ export const tubeIntro = (() => {
               pathValue -= 5;
               path.style.strokeDashoffset = pathValue;
               
-              console.log(pathValue);
               if(pathValue <= 30) clearInterval(interval);
             },16);
           });
@@ -28,7 +27,7 @@ export const tubeIntro = (() => {
             tubeIntroSVG.style.transform = 'translateY(-82%)';
           } else if (window.innerWidth > 1200) {
             tubeIntroSVG.style.transform = 'translateY(-74%)';
-          } else if (window.innerWidth > 992) {
+          } else if (window.innerWidth > 1024) {
             tubeIntroSVG.style.transform = 'translateY(-70%)';
           } else if (window.innerWidth > 768) {
             tubeIntroSVG.style.transform = 'translateY(-60%)';

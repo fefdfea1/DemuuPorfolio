@@ -7,7 +7,7 @@ function scroll() {
   window.addEventListener("scroll", ()=> {
     let scrollPosition = Math.floor(window.scrollY || document.documentElement.scrollTop);
     section2Animation(scrollPosition);
-    section3Intro(scrollPosition);  
+    section3Intro(scrollPosition);
     tubeIntro(scrollPosition);  
   });
 
@@ -20,11 +20,11 @@ function scroll() {
     let eventListenerBySize;
     let isTouchMove = false; // 터치 슬라이드 여부를 확인하기 위한 플래그 변수
 
-    if (window.innerWidth > 768) {
+    // if (window.innerWidth > 1024) {
       eventListenerBySize = "mousewheel";
-    } else {
-      eventListenerBySize = "touchmove";
-    }
+    // } else {
+    //   eventListenerBySize = "touchmove";
+    // }
 
     const handleScroll = (event) => {
       event.preventDefault();

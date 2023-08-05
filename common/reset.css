@@ -1,48 +1,28 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap'); */
-@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
-/* @import url("https://fonts.googleapis.com/css?family=Syncopate"); */
-
-
 @font-face {
   font-family: 'Nanum';
-  src: url(../fonts/title/NanumSquareEB.woff);
+  src: local("NanumSquareEB"),
+  url(../fonts/title/NanumSquareEB.woff) format("woff");
 }
 
 @font-face {
   font-family: 'NanumNeo';
-  src: url(../fonts/NaverNanumSquareNeo/NanumSquareNeo-aLt.woff);
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: 'NanumNeo';
-  src: url(../fonts/NaverNanumSquareNeo/NanumSquareNeo-bRg.woff);
+  src: local("NanumSquareNeo-bRg"),
+  url(../fonts/NaverNanumSquareNeo/NanumSquareNeo-bRg.woff) format("woff");
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'NanumNeo';
-  src: url(../fonts/NaverNanumSquareNeo/NanumSquareNeo-cBd.woff);
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'NanumNeo';
-  src: url(../fonts/NaverNanumSquareNeo/NanumSquareNeo-dEb.woff);
+  src: local("NanumSquareNeo-dEb"),
+  url(../fonts/NaverNanumSquareNeo/NanumSquareNeo-dEb.woff) format("woff");
   font-weight: 700;
 }
-
-@font-face {
-  font-family: 'NanumNeo';
-  src: url(../fonts/NaverNanumSquareNeo/NanumSquareNeo-eHv.woff);
-  font-weight: 900;
-}
-
 
 html,
 body,
 div,
 span,
+applet,
 applet,
 object,
 iframe,
@@ -519,26 +499,6 @@ div.rotate135 {
   top: 470px;
   transition-delay: 0.15s;
 }
-
-
-/* -------------- footer ---------- */
-/* .footer-bx {
-  width: 100vw;
-  height: 80px;
-  background-color: #212121;
-  color: #fff;
-}
-
-.copyright {
-  color: #fff;
-  text-align: center;
-  padding-top: 18px;
-}
-
-.copyright a {
-  color: #fff;
-} */
-
 
 
 .break-container {

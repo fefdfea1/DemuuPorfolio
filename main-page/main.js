@@ -1,6 +1,7 @@
 // all
 import { cursorAction } from "./cursor.js";
 import { scrollAction } from "./scrollAction.js";
+import { redirect } from "./redirect.js";
 
 // section1
 import { initCaroselUl } from "./section1Js/slideAnimation.js";
@@ -19,7 +20,6 @@ import { sec3DownArrow } from "./section3Js/sec3DownArrow.js";
 import { tubeIntro } from "./section4Js/tubeIntro.js";
 
 // section5
-import { section5Canvas } from "./section5Js/blackBxCanvas.js";
 import { section5Canvas2 } from "./section5Js/whiteBxCanvas.js";
 
 
@@ -27,6 +27,7 @@ const init = () => {
   // all
   scrollAction();
   cursorAction();
+  redirect();
 
   // section1
   downArrow();
@@ -45,7 +46,6 @@ const init = () => {
   tubeIntro();
 
   // section5
-  section5Canvas();
   section5Canvas2();
 };
 init();
