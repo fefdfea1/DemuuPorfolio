@@ -33,6 +33,11 @@ export const loadingScreen = () => {
                 setTimeout(() => {
                   introWhiteBackground.style.transition = 'all .7s';
                   introWhiteBackground.style.transform = 'scaleY(0)';
+
+                  setTimeout(() => {
+                    section3Title.style.transform = 'translate(-50%, 100%)'
+                    section3Title.style.opacity = '0';
+                  }, 1000)
                 },400)
               },1000)
             },600)
