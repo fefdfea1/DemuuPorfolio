@@ -90,9 +90,5 @@ export const section3Intro = (() => {
       update();
 
     }
-
-    setTimeout(() => {
-      document.querySelector(".section3-down-arrow").style.opacity = "1";
-    }, 10000);
   }
 })();

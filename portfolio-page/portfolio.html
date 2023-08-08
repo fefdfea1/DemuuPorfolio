@@ -7,7 +7,6 @@
   <link rel="icon" href="../img/favicon.webp" type="image/x-icon">
   <link rel="stylesheet" href="./portfolio.css">
   <link rel="stylesheet" href="../fontawesome/css/all.min.css">
-  <script src="../common/includeHTML.js"></script>
 
   <title>Demuu Portfolio</title>
 </head>
@@ -19,7 +18,49 @@
     </div>
   </div>
 
-  <header data-include="../common/header.html"></header>
+  <header>
+    <div id="header">
+      <div class="header-container clearfix">
+        <div class="header-logo">
+          <a href="../main-page/index.html"><img src="../img/faviconB.webp" alt="logo"/></a>
+        </div>
+        <div class="header-menu">
+          <ul>
+            <li>
+              <a href="../main-page/index.html">Home</a>
+            </li>
+            <li>
+              <a href="../portfolio-page/portfolio.html">Portfolio</a>
+            </li>
+            <li>
+              <a href="../gallery-page/gallery.html">Gallery</a>
+            </li>
+            <li>
+              <a href="https://preasim.github.io">Blog</a>
+            </li>
+          </ul>
+        </div>
+    
+        <!-- ----- header-menu2 (576px or less) ----- -->
+        <div class="header-menu2">
+          <div class="circle"></div>
+          <div class="menu2-menus">
+            <ul>
+              <li><a href="../main-page/index.html">Home</a></li>
+              <li><a href="../portfolio-page/portfolio.html">Portfolio</a></li>
+              <li><a href="../gallery-page/gallery.html">Gallery</a></li>
+              <li><a href="https://preasim.github.io">Blog</a></li>
+            </ul>
+          </div>
+          <div class="burger">
+            <div class="x"></div>
+            <div class="y"></div>
+            <div class="z"></div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </header>
 
   <!-- -------------------------------- section1 --------------------------- -->
   <section>
@@ -852,7 +893,7 @@
   </div>
 
   
-  <script src="../common/common.js" type="module"></script>
+  <script src="../common/header.js"></script>
 
   <script src="./loading.js"></script>
   <script src="./other-experiences.js"></script>

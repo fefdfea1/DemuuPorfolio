@@ -20,11 +20,7 @@ function scroll() {
     let eventListenerBySize;
     let isTouchMove = false; // 터치 슬라이드 여부를 확인하기 위한 플래그 변수
 
-    // if (window.innerWidth > 1024) {
-      eventListenerBySize = "mousewheel";
-    // } else {
-    //   eventListenerBySize = "touchmove";
-    // }
+    eventListenerBySize = "mousewheel";
 
     const handleScroll = (event) => {
       event.preventDefault();

@@ -42,7 +42,7 @@ export const loadingScreen = () => {
     },100);
 
 
-    const images = [...document.querySelectorAll(".loading-images img")];
+    const images = [...document.querySelectorAll(".background-images img")];
 
     function lerp(a, b, n) {
       return (1 - n) * a + n * b;

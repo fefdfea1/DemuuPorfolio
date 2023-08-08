@@ -8,6 +8,10 @@ function sec3ArrowMove(){
       sec3ArrowMove();
     },1000)
   }, 1000)
+
+  setTimeout(() => {
+    document.querySelector(".section3-down-arrow").style.opacity = "1";
+  }, 10000);
 }
 
 export const sec3DownArrow = () => {

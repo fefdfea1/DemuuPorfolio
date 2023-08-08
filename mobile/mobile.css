@@ -1,0 +1,516 @@
+@import url("../common/reset.css");
+
+/* body::-webkit-scrollbar {display: none;} */
+header {display: none;}
+section {display: none;}
+
+.warnning {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.warnning h1 {
+  font-size: 3vw;
+}
+.warnning a {
+  line-height: 4;
+  font-size: 1vw;
+}
+
+
+@media (max-width: 1024px) {
+  .warnning {display: none;}
+
+  body {
+    position: relative;
+    overflow-x: hidden;
+    z-index: -2;
+  }
+
+  header {
+    position: fixed;
+    display: block;
+    z-index: 10;
+    opacity: 0;
+    transition: all .5s;
+  }
+  header .header-logo {display: none;}
+  header .header-menu a {color: #fff;}
+  header .burger div {background-color: #fff;}
+
+  section {
+    position: sticky;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 110vh;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  /* ---------- section1 ---------- */
+  .portfolio-content {
+    width: 100%;
+  }
+  
+  .portfolio-logo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transition: all 1.2s;
+    background-color: #fff;
+    opacity: 1;
+  }
+  
+  .portfolio-logo svg {
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+  }
+  
+  .portfolio-content {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: -1;
+  }
+  
+  .portfolio-title {
+    text-align: center;
+    margin-top: 13vh;
+    font-size: 10vw;
+    color: #fff;
+  }
+  .portfolio-txt {
+    position: static;
+    width: 60%;
+    margin: 80px auto 0 auto;
+    color: #fff;
+    line-height: 2.2em;
+  }
+  .minor-title {
+    display: inline-block;
+    font-size: 3vw;
+    font-weight: 700;
+    margin-bottom: 100px;
+  }
+  .portfolio-txt p {
+    font-size: 2vw;
+    display: inline-block;
+  }
+  .sentences1 {
+    margin-bottom: 50px;
+  }
+  .stn-after::after {
+    content: "";
+    padding-right: 2px;
+    border-right: 2px solid #e0e0e0;
+    animation: blink 0.9s infinite steps(2);
+  }
+  @keyframes blink {
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: #e0e0e0;
+    }
+  }
+  
+  .portfolio-arrow {
+    opacity: 0;
+    transition: all 1s;
+    position: absolute;
+    right: 10vw;
+    top: 84vh;
+    vertical-align: middle;
+  }
+  .portfolio-arrow a {
+    font-size: 2vw;
+    color: #fff;
+  }
+  .portfolio-arrow i {
+    vertical-align: middle;
+  }
+
+  /* ---------- section2 ---------- */
+  #section2 #particles {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    filter: url("#goo");
+  }
+  
+  #section2 .background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+  }
+  
+  #section2 .title {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%) translateY(-40%);
+    text-align: center;
+  }
+  
+  #section2 .title h5 {
+    position: relative;
+    color: #000000;
+    font-weight: 300;
+    font-size: 60px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+  
+  #section2 .title h5 span {
+    font-weight: 700;
+    font-size: 60px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+  
+  #section2 .title p {
+    font-weight: 200;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    line-height: 2;
+    color: #5e7283;
+    letter-spacing: 2px;
+  }
+  
+  #section2 .title a {
+    font-size: 18px;
+    line-height: 3;
+    color: #5e7283;
+    letter-spacing: 3px;
+  }
+  #section2 .title a i {vertical-align: middle;}
+  
+  #section2 .circle {
+    fill: #212121;
+  }
+  
+  #section2 #particles {
+    filter: blur(3px);
+  }
+  
+  #section2 svg {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    transform: translateZ(0px);
+  }
+
+  /* ---------- section3 ---------- */
+  #section3 {
+    background-color: #fff;
+  }
+  #section3 h1 {
+    margin: 80px 0 0 40px;
+    font-size: 160px;
+  }
+  #section3 a {
+    position: absolute;
+    top: 88vh;
+    right: 8%;
+    vertical-align: middle;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  #section3 i {
+    vertical-align: middle;
+  }
+
+  /* ---------- section4 ---------- */
+  #section4 {
+    background-color: #111111;
+  }
+
+  .section4-wrap {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+  }
+  
+  .section4-title {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 80px;
+  }
+  .section4-title h2 {
+    font-size: 160px;
+    transform: translate(0, 10%);
+  }
+  .section4-title h5 {
+    font-size: 32px;
+    letter-spacing: 1.8px;
+    font-weight: 700;
+  }
+  
+  .section4-content-txt {
+    color: #fff;
+    padding-bottom: 60px;
+  }
+  .section4-content-txt h5 {
+    font-weight: 700;
+    padding-bottom: 16px;
+    font-size: 28px;
+  }
+  .section4-content-txt p {
+    line-height: 1.5;
+    font-size: 24px;
+  }
+  .section4-content-txt i {vertical-align: middle;}
+  .section4-content-txt img {
+    width: 24px;
+    vertical-align: middle;
+  }
+  
+  .copyright-bx {
+    color: #fff;
+  }
+  .copyright-bx h5 {
+    font-size: 26px;
+    font-weight: 700;
+    display: inline;
+    padding-right: 10px;
+  }
+  .copyright-title a {
+    color: #fff;
+    font-size: 24px;
+    padding-right: 6px;
+  }
+  .copyright-bx p {
+    font-size: 20px;
+    line-height: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ----- section1 ----- */
+  .portfolio-title {
+    font-size: 12vw;
+  }
+
+  .portfolio-txt {
+    width: 70%;
+    margin: 100px auto 0 auto;
+    line-height: 2;
+  }
+
+  .minor-title {
+    font-size: 3.5vw;
+    margin-bottom: 60px;
+  }
+  .sentences1 {margin-bottom: 40px;}
+  .portfolio-txt p {
+    font-size: 2.5vw;
+  }
+  .portfolio-arrow a {
+    font-size: 3vw;
+  }
+
+  /* ----- section2 ----- */
+  #section2 .title h5 {
+    font-size: 50px;
+  }
+  
+  #section2 .title h5 span {
+    font-size: 50px;
+  }
+  
+  #section2 .title p {
+    font-size: 16px;
+  }
+  
+  #section2 .title a {
+    font-size: 14px;
+    line-height: 3;
+    color: #5e7283;
+    letter-spacing: 3px;
+  }
+
+  /* ---------- section3 ---------- */
+  #section3 h1 {
+    font-size: 120px;
+  }
+  #section3 a {
+    font-size: 26px;
+  }
+
+  /* ---------- section4 ---------- */
+  .section4-title h2 {
+    font-size: 140px;
+  }
+  .section4-title h5 {
+    font-size: 28px;
+  }
+
+  .section4-content-txt h5 {
+    font-size: 24px;
+  }
+  .section4-content-txt p {
+    font-size: 20px;
+  }
+  .section4-content-txt img {
+    width: 20px;
+  }
+
+  .copyright-bx h5 {
+    font-size: 22px;
+  }
+  .copyright-title a {
+    font-size: 20px;
+  }
+  .copyright-bx p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* ----- section1 ----- */
+  .portfolio-title {
+    margin-top: 100px;
+  }
+
+  .portfolio-txt {
+    width: 80%;
+    margin: 60px auto 0 auto;
+  }
+  .minor-title {
+    font-size: 4vw;
+    margin-bottom: 60px;
+  }
+  .portfolio-txt p {
+    font-size: 3vw;
+  }
+
+  .minor-title {
+    margin-bottom: 50px;
+  }
+  .sentences1 {margin-bottom: 36px;}
+
+  /* ----- section2 ----- */
+  #section2 .title h5 {
+    font-size: 40px;
+  }
+  
+  #section2 .title h5 span {
+    font-size: 40px;
+  }
+
+  /* ---------- section3 ---------- */
+  #section3 h1 {
+    font-size: 80px;
+  }
+  #section3 a {
+    font-size: 20px;
+  }
+
+
+  /* ---------- section4 ---------- */
+  .section4-title {
+    padding-bottom: 80px;
+  }
+  .section4-title h2 {
+    font-size: 90px;
+  }
+  .section4-title h5 {
+    font-size: 17px;
+  }
+  
+
+  .section4-content-txt h5 {
+    font-size: 20px;
+  }
+  .section4-content-txt p {
+    font-size: 16px;
+  }
+  .section4-content-txt img {
+    width: 16px;
+  }
+
+  .copyright-bx h5 {
+    font-size: 18px;
+  }
+  .copyright-title a {
+    font-size: 16px;
+  }
+  .copyright-bx p {
+    font-size: 12px;
+  }
+}
+
+/* @media (prefers-color-scheme: light) {
+  header .header-menu a {color: #fff;}
+  header .burger div {background-color: #fff;}
+
+  .portfolio-logo {background-color: #fff;}
+  .portfolio-content {background-color: #000;}
+  .portfolio-title {color: #fff;}
+  .portfolio-txt {color: #fff;}
+  .stn-after::after {border-right: 2px solid #e0e0e0;}
+  .portfolio-arrow a {color: #fff;}
+
+  #section2 .background {background: #fff;}
+  #section2 .title h5 {color: #000;}
+  #section2 .title p {color: #5e7283;}
+  #section2 .title a {color: #5e7283;}
+  #section2 .circle {fill: #212121;}
+
+  #section3 {
+    background-color: #fff;
+    color: #000;
+  }
+
+  #section4 {background-color: #111111;}
+  .section4-title {color: #fff;}
+  .section4-content-txt {color: #fff;}
+  .copyright-bx {color: #fff;}
+  .copyright-title a {color: #fff;}
+}
+
+@media (prefers-color-scheme: dark) {
+  header .header-menu a {color: #fff;}
+  header .burger div {background-color: #fff;}
+
+  .portfolio-logo {background-color: #fff;}
+  .portfolio-content {background-color: #000;}
+  .portfolio-title {color: #fff;}
+  .portfolio-txt {color: #fff;}
+  .stn-after::after {border-right: 2px solid #e0e0e0;}
+  .portfolio-arrow a {color: #fff;}
+
+  #section2 .background {background: #fff;}
+  #section2 .title h5 {color: #000;}
+  #section2 .title p {color: #5e7283;}
+  #section2 .title a {color: #5e7283;}
+  #section2 .circle {fill: #212121;}
+
+  #section3 {
+    background-color: #fff;
+    color: #000;
+  }
+
+  #section4 {background-color: #111111;}
+  .section4-title {color: #fff;}
+  .section4-content-txt {color: #fff;}
+  .copyright-bx {color: #fff;}
+  .copyright-title a {color: #fff;}
+} */

@@ -249,11 +249,11 @@ body::-webkit-scrollbar-track {
 
 .header-logo {
   display: inline-block;
-  margin-left: 35px;
+  margin-left: 44px;
 }
 
 .header-logo img {
-  width: 120px;
+  width: 44px;
 }
 
 .header-menu {
@@ -519,7 +519,7 @@ div.rotate135 {
 
   /* ----- header ----- */
   .header-logo img {
-    width: 100px;
+    width: 40px;
   }
 
   .header-menu li a {
@@ -539,7 +539,7 @@ div.rotate135 {
   }
 
   .header-logo img {
-    width: 90px;
+    width: 38px;
   }
 
   .header-menu ul {
@@ -562,7 +562,7 @@ div.rotate135 {
   }
 
   .header-logo img {
-    width: 80px;
+    width: 34px;
   }
 
   .header-menu li a {

@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="../fontawesome/css/all.min.css" />
 
-    <script src="../common/includeHTML.js"></script>
+    <script src="./redirect.js"></script>
 
     <title>Demuu Portfolio</title>
   </head>
@@ -20,7 +20,49 @@
     <div class="custom-cursor-icon"></div>
   </div>
 
-  <header data-include="../common/header.html"></header>
+    <header>
+      <div id="header">
+        <div class="header-container clearfix">
+          <div class="header-logo">
+            <a href="../main-page/index.html"><img src="../img/faviconB.webp" alt="logo"/></a>
+          </div>
+          <div class="header-menu">
+            <ul>
+              <li>
+                <a href="../main-page/index.html">Home</a>
+              </li>
+              <li>
+                <a href="../portfolio-page/portfolio.html">Portfolio</a>
+              </li>
+              <li>
+                <a href="../gallery-page/gallery.html">Gallery</a>
+              </li>
+              <li>
+                <a href="https://preasim.github.io">Blog</a>
+              </li>
+            </ul>
+          </div>
+      
+          <!-- ----- header-menu2 (576px or less) ----- -->
+          <div class="header-menu2">
+            <div class="circle"></div>
+            <div class="menu2-menus">
+              <ul>
+                <li><a href="../main-page/index.html">Home</a></li>
+                <li><a href="../portfolio-page/portfolio.html">Portfolio</a></li>
+                <li><a href="../gallery-page/gallery.html">Gallery</a></li>
+                <li><a href="https://preasim.github.io">Blog</a></li>
+              </ul>
+            </div>
+            <div class="burger">
+              <div class="x"></div>
+              <div class="y"></div>
+              <div class="z"></div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </header>
 
     <section id="section1" class="section">
       <div class="slide-section">
@@ -492,10 +534,8 @@
           <div class="blog-bx">
             
             <div class="blog-title">
-              <h2 class="bt-1">DISCOVER</h2>
-              <h2 class="bt-2">THE</h2>
-              <h2 class="bt-3">BLOG WORLD</h2>
-              <h2 class="bt-4">OF DEMUU</h2>
+              <h1>DEMUU BLOG</h1>
+              <p>Descover the blog world of demuu</p>
             </div>
 
             <div class="spin-bx">
@@ -511,8 +551,6 @@
     </section>
 
     <section id="section5" class="section">
-
-
 
       <div class="section5-title">
         <h2>DEMUU</h2>
@@ -570,9 +608,15 @@
       </div>
     </section>
 
+    <div class="warnning">
+      <h1>PC 전용 페이지 입니다.</h1>
+      <a href="../mobile/mobile.html">모바일버전 바로가기 <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+  
+
 
     <script src="./main.js" type="module"></script>
-    <script src="../common/common.js" type="module"></script>
+    <script src="../common/header.js"></script>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
