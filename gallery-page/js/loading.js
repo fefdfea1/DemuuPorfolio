@@ -5,43 +5,44 @@ export const loadingScreen = () => {
   const introBackground2 = document.querySelector('.bg-right');
   const introWhiteBackground = document.querySelector('.intro-background-white');
 
+  const gallery = document.querySelector('.gallery-container');
+
 
     setTimeout(() => {
       section3Title.style.opacity = '1';
       section3Title.style.transform = 'translate(-50%, -50%)'
 
       setTimeout(() => {
-        introBackground1.style.transform = 'scaleX(.1)';
-        introBackground2.style.transform = 'scaleX(.1)';
+        introBackground1.style.width = "10vw";
+        introBackground2.style.width = "10vw";
 
         setTimeout(() => {
           introBackground1.style.transition = 'all .7s';
           introBackground2.style.transition = 'all .7s';
-          introBackground1.style.transform = 'scaleX(1)';
-          introBackground2.style.transform = 'scaleX(1)';
+          introBackground1.style.width = '50vw';
+          introBackground2.style.width = '50vw';
 
           setTimeout(() => {
-            introBackground1.style.transformOrigin = 'top center';
-            introBackground2.style.transformOrigin = 'top center';
+            introBackground1.style.height = '0';
+            introBackground2.style.height = '0';
 
             setTimeout(() => {
-              introBackground1.style.transform = 'scaleY(0)';
-              introBackground2.style.transform = 'scaleY(0)';
-
+              introWhiteBackground.style.transform = 'scaleY(.9)';
               setTimeout(() => {
-                introWhiteBackground.style.transform = 'scaleY(.9)';
+                introWhiteBackground.style.transition = 'all .7s';
+                introWhiteBackground.style.transform = 'scaleY(0)';
+
                 setTimeout(() => {
-                  introWhiteBackground.style.transition = 'all .7s';
-                  introWhiteBackground.style.transform = 'scaleY(0)';
+                  section3Title.style.transform = 'translate(-50%, 100%)'
+                  section3Title.style.opacity = '0';
 
                   setTimeout(() => {
-                    section3Title.style.transform = 'translate(-50%, 100%)'
-                    section3Title.style.opacity = '0';
-                  }, 1000)
-                },400)
-              },1000)
-            },600)
-          },700)
+                    gallery.style.opacity = '1';
+                  }, 300)
+                }, 500)
+              },400)
+            },1000)
+          },1000)
         }, 300)
       }, 1000);
     },100);
