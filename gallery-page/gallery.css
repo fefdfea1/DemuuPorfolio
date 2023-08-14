@@ -1,6 +1,5 @@
 @import url("../common/reset.css");
 
-
 body::-webkit-scrollbar {
   display: none;
 }
@@ -20,7 +19,7 @@ main {
 
 header {
   opacity: 0;
-  transition: all .6s ease-in;
+  transition: all 0.6s ease-in;
 }
 .header-menu li a {
   color: #fff;
@@ -51,7 +50,7 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, 100%) rotate(-0.003deg);
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
   display: none;
   opacity: 0;
   color: #fff;
@@ -104,7 +103,7 @@ header {
 .gallery-container {
   display: none;
   opacity: 0;
-  transition: all .6s ease-in;
+  transition: all 0.6s ease-in;
 }
 
 .slide-wrapper {
@@ -118,15 +117,15 @@ header {
 .slides {
   width: 250vw;
   /* 10, -10, -30, -50, -70*/
-  transform: translateX(-30%); 
-  transition: all .5s linear;
+  transform: translateX(-30%);
+  transition: all 0.5s linear;
 }
 .slide-item {
   position: relative;
   width: 50vw;
   height: 500px;
   float: left;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
   border: 1px solid #fff;
 }
@@ -135,16 +134,22 @@ header {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0) translate3d(0, 0, 0);
-  -webkit-box-reflect: below -6vw -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.5)));
-  transition: all .5s ease-in;
+  -webkit-box-reflect: below -6vw -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(transparent),
+      color-stop(0.45, transparent),
+      to(rgba(255, 255, 255, 0.5))
+    );
+  transition: all 0.5s ease-in;
 }
 
 .slide-item.inactive {
-  transform: scale(.7);
+  transform: scale(0.7);
   filter: grayscale(100%);
-  opacity: .5;
+  opacity: 0.5;
 }
-
 
 /* --------------------------- slide 1  --------------------------- */
 .slide1 {
@@ -228,41 +233,41 @@ header {
 
 @-ms-keyframes spin2 {
   from {
-      -ms-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
   }
 
   to {
-      -ms-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
   }
 }
 
 @-moz-keyframes spin2 {
   from {
-      -moz-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
   }
 
   to {
-      -moz-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
   }
 }
 
 @-webkit-keyframes spin2 {
   from {
-      -webkit-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
   }
 
   to {
-      -webkit-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
   }
 }
 
 @keyframes spin2 {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -302,7 +307,7 @@ header {
 }
 
 /* --------------------------- slide 3 uncover --------------------------- */
-.slide-item  .h {
+.slide-item .h {
   text-align: center;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/overlay.png");
   overflow: hidden;
@@ -314,7 +319,8 @@ header {
   border-radius: 5px;
   z-index: 1;
 }
-.h h5, .h p {
+.h h5,
+.h p {
   position: absolute;
   z-index: 3;
   text-transform: uppercase;
@@ -354,7 +360,7 @@ header {
   -ms-filter: blur(8.3333333333px);
   transform-origin: 4px 2px;
   -webkit-animation: spin 3s 0.1s linear infinite;
-          animation: spin 3s 0.1s linear infinite;
+  animation: spin 3s 0.1s linear infinite;
   background: rgba(93, 34, 205, 0.9875);
 }
 .h .c:nth-of-type(2) {
@@ -369,7 +375,7 @@ header {
   -ms-filter: blur(8.6666666667px);
   transform-origin: 8px 4px;
   -webkit-animation: spin 3s 0.2s linear infinite;
-          animation: spin 3s 0.2s linear infinite;
+  animation: spin 3s 0.2s linear infinite;
   background: rgba(96, 35, 205, 0.975);
 }
 .h .c:nth-of-type(3) {
@@ -384,7 +390,7 @@ header {
   -ms-filter: blur(9px);
   transform-origin: 12px 6px;
   -webkit-animation: spin 3s 0.3s linear infinite;
-          animation: spin 3s 0.3s linear infinite;
+  animation: spin 3s 0.3s linear infinite;
   background: rgba(99, 36, 205, 0.9625);
 }
 .h .c:nth-of-type(4) {
@@ -399,7 +405,7 @@ header {
   -ms-filter: blur(9.3333333333px);
   transform-origin: 16px 8px;
   -webkit-animation: spin 3s 0.4s linear infinite;
-          animation: spin 3s 0.4s linear infinite;
+  animation: spin 3s 0.4s linear infinite;
   background: rgba(102, 37, 205, 0.95);
 }
 .h .c:nth-of-type(5) {
@@ -414,7 +420,7 @@ header {
   -ms-filter: blur(9.6666666667px);
   transform-origin: 20px 10px;
   -webkit-animation: spin 3s 0.5s linear infinite;
-          animation: spin 3s 0.5s linear infinite;
+  animation: spin 3s 0.5s linear infinite;
   background: rgba(105, 38, 205, 0.9375);
 }
 .h .c:nth-of-type(6) {
@@ -429,7 +435,7 @@ header {
   -ms-filter: blur(10px);
   transform-origin: 24px 12px;
   -webkit-animation: spin 3s 0.6s linear infinite;
-          animation: spin 3s 0.6s linear infinite;
+  animation: spin 3s 0.6s linear infinite;
   background: rgba(108, 39, 205, 0.925);
 }
 .h .c:nth-of-type(7) {
@@ -444,7 +450,7 @@ header {
   -ms-filter: blur(10.3333333333px);
   transform-origin: 28px 14px;
   -webkit-animation: spin 3s 0.7s linear infinite;
-          animation: spin 3s 0.7s linear infinite;
+  animation: spin 3s 0.7s linear infinite;
   background: rgba(111, 40, 205, 0.9125);
 }
 .h .c:nth-of-type(8) {
@@ -459,7 +465,7 @@ header {
   -ms-filter: blur(10.6666666667px);
   transform-origin: 32px 16px;
   -webkit-animation: spin 3s 0.8s linear infinite;
-          animation: spin 3s 0.8s linear infinite;
+  animation: spin 3s 0.8s linear infinite;
   background: rgba(114, 41, 205, 0.9);
 }
 .h .c:nth-of-type(9) {
@@ -474,7 +480,7 @@ header {
   -ms-filter: blur(11px);
   transform-origin: 36px 18px;
   -webkit-animation: spin 3s 0.9s linear infinite;
-          animation: spin 3s 0.9s linear infinite;
+  animation: spin 3s 0.9s linear infinite;
   background: rgba(117, 42, 205, 0.8875);
 }
 .h .c:nth-of-type(10) {
@@ -489,7 +495,7 @@ header {
   -ms-filter: blur(11.3333333333px);
   transform-origin: 40px 20px;
   -webkit-animation: spin 3s 1s linear infinite;
-          animation: spin 3s 1s linear infinite;
+  animation: spin 3s 1s linear infinite;
   background: rgba(120, 43, 205, 0.875);
 }
 .h .c:nth-of-type(11) {
@@ -504,7 +510,7 @@ header {
   -ms-filter: blur(11.6666666667px);
   transform-origin: 44px 22px;
   -webkit-animation: spin 3s 1.1s linear infinite;
-          animation: spin 3s 1.1s linear infinite;
+  animation: spin 3s 1.1s linear infinite;
   background: rgba(123, 44, 205, 0.8625);
 }
 .h .c:nth-of-type(12) {
@@ -519,7 +525,7 @@ header {
   -ms-filter: blur(12px);
   transform-origin: 48px 24px;
   -webkit-animation: spin 3s 1.2s linear infinite;
-          animation: spin 3s 1.2s linear infinite;
+  animation: spin 3s 1.2s linear infinite;
   background: rgba(126, 45, 205, 0.85);
 }
 .h .c:nth-of-type(13) {
@@ -534,7 +540,7 @@ header {
   -ms-filter: blur(12.3333333333px);
   transform-origin: 52px 26px;
   -webkit-animation: spin 3s 1.3s linear infinite;
-          animation: spin 3s 1.3s linear infinite;
+  animation: spin 3s 1.3s linear infinite;
   background: rgba(129, 46, 205, 0.8375);
 }
 .h .c:nth-of-type(14) {
@@ -549,7 +555,7 @@ header {
   -ms-filter: blur(12.6666666667px);
   transform-origin: 56px 28px;
   -webkit-animation: spin 3s 1.4s linear infinite;
-          animation: spin 3s 1.4s linear infinite;
+  animation: spin 3s 1.4s linear infinite;
   background: rgba(132, 47, 205, 0.825);
 }
 .h .c:nth-of-type(15) {
@@ -564,7 +570,7 @@ header {
   -ms-filter: blur(13px);
   transform-origin: 60px 30px;
   -webkit-animation: spin 3s 1.5s linear infinite;
-          animation: spin 3s 1.5s linear infinite;
+  animation: spin 3s 1.5s linear infinite;
   background: rgba(135, 48, 205, 0.8125);
 }
 .h .c:nth-of-type(16) {
@@ -579,7 +585,7 @@ header {
   -ms-filter: blur(13.3333333333px);
   transform-origin: 64px 32px;
   -webkit-animation: spin 3s 1.6s linear infinite;
-          animation: spin 3s 1.6s linear infinite;
+  animation: spin 3s 1.6s linear infinite;
   background: rgba(138, 49, 205, 0.8);
 }
 .h .c:nth-of-type(17) {
@@ -594,7 +600,7 @@ header {
   -ms-filter: blur(13.6666666667px);
   transform-origin: 68px 34px;
   -webkit-animation: spin 3s 1.7s linear infinite;
-          animation: spin 3s 1.7s linear infinite;
+  animation: spin 3s 1.7s linear infinite;
   background: rgba(141, 50, 205, 0.7875);
 }
 .h .c:nth-of-type(18) {
@@ -609,7 +615,7 @@ header {
   -ms-filter: blur(14px);
   transform-origin: 72px 36px;
   -webkit-animation: spin 3s 1.8s linear infinite;
-          animation: spin 3s 1.8s linear infinite;
+  animation: spin 3s 1.8s linear infinite;
   background: rgba(144, 51, 205, 0.775);
 }
 .h .c:nth-of-type(19) {
@@ -624,7 +630,7 @@ header {
   -ms-filter: blur(14.3333333333px);
   transform-origin: 76px 38px;
   -webkit-animation: spin 3s 1.9s linear infinite;
-          animation: spin 3s 1.9s linear infinite;
+  animation: spin 3s 1.9s linear infinite;
   background: rgba(147, 52, 205, 0.7625);
 }
 .h .c:nth-of-type(20) {
@@ -639,7 +645,7 @@ header {
   -ms-filter: blur(14.6666666667px);
   transform-origin: 80px 40px;
   -webkit-animation: spin 3s 2s linear infinite;
-          animation: spin 3s 2s linear infinite;
+  animation: spin 3s 2s linear infinite;
   background: rgba(150, 53, 205, 0.75);
 }
 .h .c:nth-of-type(21) {
@@ -654,7 +660,7 @@ header {
   -ms-filter: blur(15px);
   transform-origin: 84px 42px;
   -webkit-animation: spin 3s 2.1s linear infinite;
-          animation: spin 3s 2.1s linear infinite;
+  animation: spin 3s 2.1s linear infinite;
   background: rgba(153, 54, 205, 0.7375);
 }
 .h .c:nth-of-type(22) {
@@ -669,7 +675,7 @@ header {
   -ms-filter: blur(15.3333333333px);
   transform-origin: 88px 44px;
   -webkit-animation: spin 3s 2.2s linear infinite;
-          animation: spin 3s 2.2s linear infinite;
+  animation: spin 3s 2.2s linear infinite;
   background: rgba(156, 55, 205, 0.725);
 }
 .h .c:nth-of-type(23) {
@@ -684,7 +690,7 @@ header {
   -ms-filter: blur(15.6666666667px);
   transform-origin: 92px 46px;
   -webkit-animation: spin 3s 2.3s linear infinite;
-          animation: spin 3s 2.3s linear infinite;
+  animation: spin 3s 2.3s linear infinite;
   background: rgba(159, 56, 205, 0.7125);
 }
 .h .c:nth-of-type(24) {
@@ -699,7 +705,7 @@ header {
   -ms-filter: blur(16px);
   transform-origin: 96px 48px;
   -webkit-animation: spin 3s 2.4s linear infinite;
-          animation: spin 3s 2.4s linear infinite;
+  animation: spin 3s 2.4s linear infinite;
   background: rgba(162, 57, 205, 0.7);
 }
 .h .c:nth-of-type(25) {
@@ -714,7 +720,7 @@ header {
   -ms-filter: blur(16.3333333333px);
   transform-origin: 100px 50px;
   -webkit-animation: spin 3s 2.5s linear infinite;
-          animation: spin 3s 2.5s linear infinite;
+  animation: spin 3s 2.5s linear infinite;
   background: rgba(165, 58, 205, 0.6875);
 }
 .h .c:nth-of-type(26) {
@@ -729,7 +735,7 @@ header {
   -ms-filter: blur(16.6666666667px);
   transform-origin: 104px 52px;
   -webkit-animation: spin 3s 2.6s linear infinite;
-          animation: spin 3s 2.6s linear infinite;
+  animation: spin 3s 2.6s linear infinite;
   background: rgba(168, 59, 205, 0.675);
 }
 .h .c:nth-of-type(27) {
@@ -744,7 +750,7 @@ header {
   -ms-filter: blur(17px);
   transform-origin: 108px 54px;
   -webkit-animation: spin 3s 2.7s linear infinite;
-          animation: spin 3s 2.7s linear infinite;
+  animation: spin 3s 2.7s linear infinite;
   background: rgba(171, 60, 205, 0.6625);
 }
 .h .c:nth-of-type(28) {
@@ -759,7 +765,7 @@ header {
   -ms-filter: blur(17.3333333333px);
   transform-origin: 112px 56px;
   -webkit-animation: spin 3s 2.8s linear infinite;
-          animation: spin 3s 2.8s linear infinite;
+  animation: spin 3s 2.8s linear infinite;
   background: rgba(174, 61, 205, 0.65);
 }
 .h .c:nth-of-type(29) {
@@ -774,7 +780,7 @@ header {
   -ms-filter: blur(17.6666666667px);
   transform-origin: 116px 58px;
   -webkit-animation: spin 3s 2.9s linear infinite;
-          animation: spin 3s 2.9s linear infinite;
+  animation: spin 3s 2.9s linear infinite;
   background: rgba(177, 62, 205, 0.6375);
 }
 .h .c:nth-of-type(30) {
@@ -789,7 +795,7 @@ header {
   -ms-filter: blur(18px);
   transform-origin: 120px 60px;
   -webkit-animation: spin 3s 3s linear infinite;
-          animation: spin 3s 3s linear infinite;
+  animation: spin 3s 3s linear infinite;
   background: rgba(180, 63, 205, 0.625);
 }
 .h .c:nth-of-type(31) {
@@ -804,7 +810,7 @@ header {
   -ms-filter: blur(18.3333333333px);
   transform-origin: 124px 62px;
   -webkit-animation: spin 3s 3.1s linear infinite;
-          animation: spin 3s 3.1s linear infinite;
+  animation: spin 3s 3.1s linear infinite;
   background: rgba(183, 64, 205, 0.6125);
 }
 .h .c:nth-of-type(32) {
@@ -819,7 +825,7 @@ header {
   -ms-filter: blur(18.6666666667px);
   transform-origin: 128px 64px;
   -webkit-animation: spin 3s 3.2s linear infinite;
-          animation: spin 3s 3.2s linear infinite;
+  animation: spin 3s 3.2s linear infinite;
   background: rgba(186, 65, 205, 0.6);
 }
 .h .c:nth-of-type(33) {
@@ -834,7 +840,7 @@ header {
   -ms-filter: blur(19px);
   transform-origin: 132px 66px;
   -webkit-animation: spin 3s 3.3s linear infinite;
-          animation: spin 3s 3.3s linear infinite;
+  animation: spin 3s 3.3s linear infinite;
   background: rgba(189, 66, 205, 0.5875);
 }
 .h .c:nth-of-type(34) {
@@ -849,7 +855,7 @@ header {
   -ms-filter: blur(19.3333333333px);
   transform-origin: 136px 68px;
   -webkit-animation: spin 3s 3.4s linear infinite;
-          animation: spin 3s 3.4s linear infinite;
+  animation: spin 3s 3.4s linear infinite;
   background: rgba(192, 67, 205, 0.575);
 }
 .h .c:nth-of-type(35) {
@@ -864,7 +870,7 @@ header {
   -ms-filter: blur(19.6666666667px);
   transform-origin: 140px 70px;
   -webkit-animation: spin 3s 3.5s linear infinite;
-          animation: spin 3s 3.5s linear infinite;
+  animation: spin 3s 3.5s linear infinite;
   background: rgba(195, 68, 205, 0.5625);
 }
 .h .c:nth-of-type(36) {
@@ -879,7 +885,7 @@ header {
   -ms-filter: blur(20px);
   transform-origin: 144px 72px;
   -webkit-animation: spin 3s 3.6s linear infinite;
-          animation: spin 3s 3.6s linear infinite;
+  animation: spin 3s 3.6s linear infinite;
   background: rgba(198, 69, 205, 0.55);
 }
 .h .c:nth-of-type(37) {
@@ -894,7 +900,7 @@ header {
   -ms-filter: blur(20.3333333333px);
   transform-origin: 148px 74px;
   -webkit-animation: spin 3s 3.7s linear infinite;
-          animation: spin 3s 3.7s linear infinite;
+  animation: spin 3s 3.7s linear infinite;
   background: rgba(201, 70, 205, 0.5375);
 }
 .h .c:nth-of-type(38) {
@@ -909,7 +915,7 @@ header {
   -ms-filter: blur(20.6666666667px);
   transform-origin: 152px 76px;
   -webkit-animation: spin 3s 3.8s linear infinite;
-          animation: spin 3s 3.8s linear infinite;
+  animation: spin 3s 3.8s linear infinite;
   background: rgba(204, 71, 205, 0.525);
 }
 .h .c:nth-of-type(39) {
@@ -924,7 +930,7 @@ header {
   -ms-filter: blur(21px);
   transform-origin: 156px 78px;
   -webkit-animation: spin 3s 3.9s linear infinite;
-          animation: spin 3s 3.9s linear infinite;
+  animation: spin 3s 3.9s linear infinite;
   background: rgba(207, 72, 205, 0.5125);
 }
 .h .c:nth-of-type(40) {
@@ -939,7 +945,7 @@ header {
   -ms-filter: blur(21.3333333333px);
   transform-origin: 160px 80px;
   -webkit-animation: spin 3s 4s linear infinite;
-          animation: spin 3s 4s linear infinite;
+  animation: spin 3s 4s linear infinite;
   background: rgba(210, 73, 205, 0.5);
 }
 .h .c:nth-of-type(41) {
@@ -954,7 +960,7 @@ header {
   -ms-filter: blur(21.6666666667px);
   transform-origin: 164px 82px;
   -webkit-animation: spin 3s 4.1s linear infinite;
-          animation: spin 3s 4.1s linear infinite;
+  animation: spin 3s 4.1s linear infinite;
   background: rgba(213, 74, 205, 0.4875);
 }
 .h .c:nth-of-type(42) {
@@ -969,7 +975,7 @@ header {
   -ms-filter: blur(22px);
   transform-origin: 168px 84px;
   -webkit-animation: spin 3s 4.2s linear infinite;
-          animation: spin 3s 4.2s linear infinite;
+  animation: spin 3s 4.2s linear infinite;
   background: rgba(216, 75, 205, 0.475);
 }
 .h .c:nth-of-type(43) {
@@ -984,7 +990,7 @@ header {
   -ms-filter: blur(22.3333333333px);
   transform-origin: 172px 86px;
   -webkit-animation: spin 3s 4.3s linear infinite;
-          animation: spin 3s 4.3s linear infinite;
+  animation: spin 3s 4.3s linear infinite;
   background: rgba(219, 76, 205, 0.4625);
 }
 .h .c:nth-of-type(44) {
@@ -999,7 +1005,7 @@ header {
   -ms-filter: blur(22.6666666667px);
   transform-origin: 176px 88px;
   -webkit-animation: spin 3s 4.4s linear infinite;
-          animation: spin 3s 4.4s linear infinite;
+  animation: spin 3s 4.4s linear infinite;
   background: rgba(222, 77, 205, 0.45);
 }
 .h .c:nth-of-type(45) {
@@ -1014,7 +1020,7 @@ header {
   -ms-filter: blur(23px);
   transform-origin: 180px 90px;
   -webkit-animation: spin 3s 4.5s linear infinite;
-          animation: spin 3s 4.5s linear infinite;
+  animation: spin 3s 4.5s linear infinite;
   background: rgba(225, 78, 205, 0.4375);
 }
 .h .c:nth-of-type(46) {
@@ -1029,7 +1035,7 @@ header {
   -ms-filter: blur(23.3333333333px);
   transform-origin: 184px 92px;
   -webkit-animation: spin 3s 4.6s linear infinite;
-          animation: spin 3s 4.6s linear infinite;
+  animation: spin 3s 4.6s linear infinite;
   background: rgba(228, 79, 205, 0.425);
 }
 .h .c:nth-of-type(47) {
@@ -1044,7 +1050,7 @@ header {
   -ms-filter: blur(23.6666666667px);
   transform-origin: 188px 94px;
   -webkit-animation: spin 3s 4.7s linear infinite;
-          animation: spin 3s 4.7s linear infinite;
+  animation: spin 3s 4.7s linear infinite;
   background: rgba(231, 80, 205, 0.4125);
 }
 .h .c:nth-of-type(48) {
@@ -1059,7 +1065,7 @@ header {
   -ms-filter: blur(24px);
   transform-origin: 192px 96px;
   -webkit-animation: spin 3s 4.8s linear infinite;
-          animation: spin 3s 4.8s linear infinite;
+  animation: spin 3s 4.8s linear infinite;
   background: rgba(234, 81, 205, 0.4);
 }
 .h .c:nth-of-type(49) {
@@ -1074,7 +1080,7 @@ header {
   -ms-filter: blur(24.3333333333px);
   transform-origin: 196px 98px;
   -webkit-animation: spin 3s 4.9s linear infinite;
-          animation: spin 3s 4.9s linear infinite;
+  animation: spin 3s 4.9s linear infinite;
   background: rgba(237, 82, 205, 0.3875);
 }
 .h .c:nth-of-type(50) {
@@ -1089,7 +1095,7 @@ header {
   -ms-filter: blur(24.6666666667px);
   transform-origin: 200px 100px;
   -webkit-animation: spin 3s 5s linear infinite;
-          animation: spin 3s 5s linear infinite;
+  animation: spin 3s 5s linear infinite;
   background: rgba(240, 83, 205, 0.375);
 }
 .h .c:nth-of-type(51) {
@@ -1104,7 +1110,7 @@ header {
   -ms-filter: blur(25px);
   transform-origin: 204px 102px;
   -webkit-animation: spin 3s 5.1s linear infinite;
-          animation: spin 3s 5.1s linear infinite;
+  animation: spin 3s 5.1s linear infinite;
   background: rgba(243, 84, 205, 0.3625);
 }
 .h .c:nth-of-type(52) {
@@ -1119,7 +1125,7 @@ header {
   -ms-filter: blur(25.3333333333px);
   transform-origin: 208px 104px;
   -webkit-animation: spin 3s 5.2s linear infinite;
-          animation: spin 3s 5.2s linear infinite;
+  animation: spin 3s 5.2s linear infinite;
   background: rgba(246, 85, 205, 0.35);
 }
 .h .c:nth-of-type(53) {
@@ -1134,7 +1140,7 @@ header {
   -ms-filter: blur(25.6666666667px);
   transform-origin: 212px 106px;
   -webkit-animation: spin 3s 5.3s linear infinite;
-          animation: spin 3s 5.3s linear infinite;
+  animation: spin 3s 5.3s linear infinite;
   background: rgba(249, 86, 205, 0.3375);
 }
 .h .c:nth-of-type(54) {
@@ -1149,7 +1155,7 @@ header {
   -ms-filter: blur(26px);
   transform-origin: 216px 108px;
   -webkit-animation: spin 3s 5.4s linear infinite;
-          animation: spin 3s 5.4s linear infinite;
+  animation: spin 3s 5.4s linear infinite;
   background: rgba(252, 87, 205, 0.325);
 }
 .h .c:nth-of-type(55) {
@@ -1164,7 +1170,7 @@ header {
   -ms-filter: blur(26.3333333333px);
   transform-origin: 220px 110px;
   -webkit-animation: spin 3s 5.5s linear infinite;
-          animation: spin 3s 5.5s linear infinite;
+  animation: spin 3s 5.5s linear infinite;
   background: rgba(255, 88, 205, 0.3125);
 }
 .h .c:nth-of-type(56) {
@@ -1179,7 +1185,7 @@ header {
   -ms-filter: blur(26.6666666667px);
   transform-origin: 224px 112px;
   -webkit-animation: spin 3s 5.6s linear infinite;
-          animation: spin 3s 5.6s linear infinite;
+  animation: spin 3s 5.6s linear infinite;
   background: rgba(255, 89, 205, 0.3);
 }
 .h .c:nth-of-type(57) {
@@ -1194,7 +1200,7 @@ header {
   -ms-filter: blur(27px);
   transform-origin: 228px 114px;
   -webkit-animation: spin 3s 5.7s linear infinite;
-          animation: spin 3s 5.7s linear infinite;
+  animation: spin 3s 5.7s linear infinite;
   background: rgba(255, 90, 205, 0.2875);
 }
 .h .c:nth-of-type(58) {
@@ -1209,7 +1215,7 @@ header {
   -ms-filter: blur(27.3333333333px);
   transform-origin: 232px 116px;
   -webkit-animation: spin 3s 5.8s linear infinite;
-          animation: spin 3s 5.8s linear infinite;
+  animation: spin 3s 5.8s linear infinite;
   background: rgba(255, 91, 205, 0.275);
 }
 .h .c:nth-of-type(59) {
@@ -1224,7 +1230,7 @@ header {
   -ms-filter: blur(27.6666666667px);
   transform-origin: 236px 118px;
   -webkit-animation: spin 3s 5.9s linear infinite;
-          animation: spin 3s 5.9s linear infinite;
+  animation: spin 3s 5.9s linear infinite;
   background: rgba(255, 92, 205, 0.2625);
 }
 .h .c:nth-of-type(60) {
@@ -1239,7 +1245,7 @@ header {
   -ms-filter: blur(28px);
   transform-origin: 240px 120px;
   -webkit-animation: spin 3s 6s linear infinite;
-          animation: spin 3s 6s linear infinite;
+  animation: spin 3s 6s linear infinite;
   background: rgba(255, 93, 205, 0.25);
 }
 
@@ -1261,7 +1267,6 @@ header {
   }
 }
 
-
 /* --------------------------- slide4 camp us --------------------------------- */
 
 .box {
@@ -1272,7 +1277,7 @@ header {
   background: #fbfcee;
   position: absolute;
   overflow: hidden;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
   z-index: 1;
 }
 
@@ -1288,17 +1293,17 @@ header {
   transform-origin: 50% 48%;
   border-radius: 43%;
   -webkit-animation: drift 3000ms infinite linear;
-          animation: drift 3000ms infinite linear;
+  animation: drift 3000ms infinite linear;
 }
 
 .wave.-three {
   -webkit-animation: drift 5000ms infinite linear;
-          animation: drift 5000ms infinite linear;
+  animation: drift 5000ms infinite linear;
 }
 
 .wave.-two {
   -webkit-animation: drift 7000ms infinite linear;
-          animation: drift 7000ms infinite linear;
+  animation: drift 7000ms infinite linear;
   opacity: 0.1;
   background: #0af;
 }
@@ -1310,7 +1315,12 @@ header {
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #ee88aa, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5));
+  background: linear-gradient(
+    to bottom,
+    #ee88aa,
+    rgba(221, 238, 255, 0) 80%,
+    rgba(255, 255, 255, 0.5)
+  );
   z-index: 11;
   transform: translate3d(0, 0, 0);
 }
@@ -1360,7 +1370,6 @@ header {
   }
 }
 
-
 /* --------------------------- slide5 --------------------------------- */
 .poster {
   transform-origin: center center;
@@ -1380,7 +1389,7 @@ header {
   box-shadow: 0 0px 20px rgba(255, 255, 255, 0.2);
   line-height: 1;
   border-radius: 5px;
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .poster__body {
@@ -1400,31 +1409,31 @@ header {
 }
 .poster__body svg g:nth-child(1) {
   -webkit-animation: rotate 1.4285714286s linear infinite;
-          animation: rotate 1.4285714286s linear infinite;
+  animation: rotate 1.4285714286s linear infinite;
 }
 .poster__body svg g:nth-child(2) {
   -webkit-animation: rotate 2.1428571429s linear infinite;
-          animation: rotate 2.1428571429s linear infinite;
+  animation: rotate 2.1428571429s linear infinite;
 }
 .poster__body svg g:nth-child(3) {
   -webkit-animation: rotate 2.8571428571s linear infinite;
-          animation: rotate 2.8571428571s linear infinite;
+  animation: rotate 2.8571428571s linear infinite;
 }
 .poster__body svg g:nth-child(4) {
   -webkit-animation: rotate 3.5714285714s linear infinite;
-          animation: rotate 3.5714285714s linear infinite;
+  animation: rotate 3.5714285714s linear infinite;
 }
 .poster__body svg g:nth-child(5) {
   -webkit-animation: rotate 4.2857142857s linear infinite;
-          animation: rotate 4.2857142857s linear infinite;
+  animation: rotate 4.2857142857s linear infinite;
 }
 .poster__body svg g:nth-child(6) {
   -webkit-animation: rotate 5s linear infinite;
-          animation: rotate 5s linear infinite;
+  animation: rotate 5s linear infinite;
 }
 .poster__body svg g:nth-child(7) {
   -webkit-animation: rotate 5.7142857143s linear infinite;
-          animation: rotate 5.7142857143s linear infinite;
+  animation: rotate 5.7142857143s linear infinite;
 }
 
 .poster__body h5 {
@@ -1487,22 +1496,25 @@ header {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
 }
-.slide-control .prev:hover, .slide-control .next:hover {background-color: rgba(0, 0, 0, 0.05);}
+.slide-control .prev:hover,
+.slide-control .next:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
 
-.prev i, .next i {
+.prev i,
+.next i {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-
 /* ----------------------- slide contents ------------------------- */
 .si-content {
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translate3d(0, 0, 0);
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
   width: 500px;
   height: 500px;
   color: #fff;
@@ -1564,6 +1576,8 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
+  /* //깜빡이는 타이밍 transition으로 조절 */
+  transition: 0.8s;
   transform: translate(-50%, -50%);
   width: 500px;
   height: 500px;
@@ -1584,13 +1598,13 @@ header {
 }
 
 .bright::after {
-  background-color:#eeeeee;
-  animation : backglow2 15s ease infinite;
+  background-color: #eeeeee;
+  animation: backglow2 15s ease infinite;
 }
 
 .bright::before {
-  background-color:#eeeeee;
-  animation : backglow1 15s ease infinite;
+  background-color: #eeeeee;
+  animation: backglow1 15s ease infinite;
 }
 
 @keyframes backglow1 {
@@ -1652,14 +1666,12 @@ header {
   .loading-title {
     font-size: 3.2vw;
   }
-
 }
 
 @media (max-width: 1200px) {
   .loading-title {
     font-size: 3vw;
   }
-
 }
 
 @media (max-width: 1024px) {
@@ -1682,13 +1694,13 @@ header {
     line-height: 4;
     font-size: 2vw;
   }
-} 
+}
 
 /* phone size */
 /* @media (max-width: 768px) { */
 
-  /* ----- section3 ----- */
-  /* .section3-title {
+/* ----- section3 ----- */
+/* .section3-title {
     width: 100%;
     text-align: center;
     font-size: 4vw;
@@ -1702,8 +1714,8 @@ header {
 /* phone size */
 /* @media (max-width: 576px) { */
 
-  /* ----- section3 ----- */
-  /* .section3-title {
+/* ----- section3 ----- */
+/* .section3-title {
     font-size: 5vw;
   }
   .galleryBtn a {
