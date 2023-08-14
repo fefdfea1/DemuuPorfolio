@@ -5,101 +5,60 @@ export const loadingScreen = () => {
   const introBackground2 = document.querySelector('.bg-right');
   const introWhiteBackground = document.querySelector('.intro-background-white');
 
-  const gallery = document.querySelector('.gallery-container');
+  const header = document.querySelector('header');
+  const galleryContainer = document.querySelector('.gallery-container');
+  const gallery = document.querySelector('.gallery');
 
+  setTimeout(() => {
+    section3Title.style.display = 'block';
+    introBackground1.style.display = 'block';
+    introBackground2.style.display = 'block';
+    introWhiteBackground.style.display = 'block';
+  },10)
+
+  setTimeout(() => {
+    gallery.style.background = '#212121';
+    section3Title.style.opacity = '1';
+    section3Title.style.transform = 'translate(-50%, -50%) rotate(-0.003deg)';
 
     setTimeout(() => {
-      section3Title.style.opacity = '1';
-      section3Title.style.transform = 'translate(-50%, -50%)'
+      introBackground1.style.width = "10vw";
+      introBackground2.style.width = "10vw";
 
       setTimeout(() => {
-        introBackground1.style.width = "10vw";
-        introBackground2.style.width = "10vw";
+        introBackground1.style.transition = 'all .7s';
+        introBackground2.style.transition = 'all .7s';
+        introBackground1.style.width = '50vw';
+        introBackground2.style.width = '50vw';
 
         setTimeout(() => {
-          introBackground1.style.transition = 'all .7s';
-          introBackground2.style.transition = 'all .7s';
-          introBackground1.style.width = '50vw';
-          introBackground2.style.width = '50vw';
+          introBackground1.style.height = '0';
+          introBackground2.style.height = '0';
 
           setTimeout(() => {
-            introBackground1.style.height = '0';
-            introBackground2.style.height = '0';
+            introWhiteBackground.style.height = '90vh';
+            
+            setTimeout(() => {
+              section3Title.style.transform = 'translate(-50%, 100%)'
+              section3Title.style.opacity = '0';
+            }, 100);
 
             setTimeout(() => {
-              introWhiteBackground.style.transform = 'scaleY(.9)';
+              introWhiteBackground.style.transition = 'all .7s';
+              introWhiteBackground.style.height = '0';
+
               setTimeout(() => {
-                introWhiteBackground.style.transition = 'all .7s';
-                introWhiteBackground.style.transform = 'scaleY(0)';
-
-                setTimeout(() => {
-                  section3Title.style.transform = 'translate(-50%, 100%)'
-                  section3Title.style.opacity = '0';
-
-                  setTimeout(() => {
-                    gallery.style.opacity = '1';
-                  }, 300)
-                }, 500)
-              },400)
-            },1000)
+                section3Title.style.display = 'none';
+                galleryContainer.style.display = 'block';
+                setTimeout(()=>{
+                  header.style.opacity = '1';
+                  galleryContainer.style.opacity = '1';
+                }, 100)
+              }, 100)
+            },400)
           },1000)
-        }, 300)
-      }, 1000);
-    },100);
-
-
-    const images = [...document.querySelectorAll(".background-images img")];
-
-    function lerp(a, b, n) {
-      return (1 - n) * a + n * b;
-    }
-
-    function map(x, a, b, c, d) {
-      return ((x - a) * (d - c)) / (b - a) + c;
-    }
-
-    function getMousePosition(e) {
-      let posX = e.clientX;
-      let posY = e.clientY;
-
-      return {
-        x: posX,
-        y: posY
-      };
-    }
-
-    let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    window.addEventListener("mousemove", function(e) {
-      mousePos = getMousePosition(e);
-    });
-
-    images.forEach(function(img) {
-      let values = { x: 0, y: 0 };
-      const xStart = getRandomNumber(16, 64);
-      const yStart = getRandomNumber(-16, 64);
-
-      function getRandomNumber(min, max) {
-        return Math.random() * (max - min) + min;
-      }
-
-      function render() {
-        values.x = lerp(
-          values.x,
-          map(mousePos.x, 0, window.innerWidth, -xStart, xStart),
-          0.07
-        );
-
-        values.y = lerp(
-          values.y,
-          map(mousePos.y, 0, window.innerHeight, -yStart, yStart),
-          0.07
-        );
-
-        img.style.transform = `translate(${values.x}px, ${values.y}px)`;
-
-        requestAnimationFrame(render);
-      }
-
-      render();
-    });
+        },1000)
+      }, 300)
+    }, 1000);
+  },100);
 };

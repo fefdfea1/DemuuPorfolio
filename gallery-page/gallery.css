@@ -18,6 +18,10 @@ main {
   display: none;
 }
 
+header {
+  opacity: 0;
+  transition: all .6s ease-in;
+}
 .header-menu li a {
   color: #fff;
 }
@@ -28,7 +32,7 @@ main {
 /* ---------- loading screen ---------- */
 #screen-wrap {
   position: relative;
-  z-index: -1;
+  z-index: -3;
   width: 100vw;
   height: 100vh;
   background-color: #fff;
@@ -47,15 +51,15 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, 100%) rotate(-0.003deg);
-  opacity: 0;
   transition: all .5s ease-in;
+  display: none;
+  opacity: 0;
   color: #fff;
   mix-blend-mode: difference;
   z-index: 3;
   font-size: 2.8vw;
   font-weight: 700;
 }
-
 
 .intro-background {
   position: absolute;
@@ -67,37 +71,38 @@ main {
 }
 
 .bg-left {
+  display: none;
   left: 0;
   width: 0;
   transition: all 2s;
 }
 
 .bg-right {
+  display: none;
   right: 0;
   width: 0;
   transition: all 2s;
 }
 
 .intro-background-white {
+  display: none;
   position: absolute;
   z-index: 1;
   width: 100%;
   height: 100%;
   background-color: #fff;
   transition: all 1.8s;
-  transform-origin: top center;
-  transform: scaleY(1);
 }
-
 
 .gallery {
   position: absolute;
-  background-color: #212121;
+  background: #fff;
   top: 0;
   width: 100vw;
   height: 100vh;
 }
 .gallery-container {
+  display: none;
   opacity: 0;
   transition: all .6s ease-in;
 }
@@ -112,7 +117,7 @@ main {
 }
 .slides {
   width: 250vw;
-  /* 10, 30, 50, 70*/
+  /* 10, -10, -30, -50, -70*/
   transform: translateX(-30%); 
   transition: all .5s linear;
 }
@@ -121,16 +126,68 @@ main {
   width: 50vw;
   height: 500px;
   float: left;
-  color: #fff;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #fff;
 }
 
 .slide-position {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 0) translate3d(0, 0, 0);
   -webkit-box-reflect: below -6vw -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.5)));
+  transition: all .5s ease-in;
 }
 
+.slide-item.inactive {
+  transform: scale(.7);
+  filter: grayscale(100%);
+  opacity: .5;
+}
+
+
+/* --------------------------- slide 1  --------------------------- */
+.slide1 {
+  width: 500px;
+  height: 500px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+#slide1-canvas {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  filter: blur(2px);
+}
+
+.slide1 h5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f5f5f5;
+  text-shadow: 0 0 5px #212121;
+  font-size: 44px;
+  font-weight: 700;
+}
+.slide1 p {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -58%);
+  color: #f5f5f5;
+  text-shadow: 0 0 5px #212121;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
 
 /* --------------------------- slide 2  --------------------------- */
 .holder {
@@ -139,6 +196,8 @@ main {
   background-color: #212121;
   overflow: hidden;
   box-shadow: 0 0px 20px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  z-index: 1;
 }
 
 .holder svg {
@@ -230,6 +289,7 @@ main {
   font-size: 32px;
   font-weight: 700;
   letter-spacing: 8px;
+  color: #fff;
 }
 .holder p {
   position: absolute;
@@ -238,6 +298,7 @@ main {
   transform: translate(-50%, -58%);
   font-size: 16px;
   letter-spacing: 4px;
+  color: #fff;
 }
 
 /* --------------------------- slide 3 uncover --------------------------- */
@@ -250,6 +311,8 @@ main {
   height: 500px;
   box-shadow: 0 0px 20px rgba(255, 255, 255, 0.2);
   background-color: #212121;
+  border-radius: 5px;
+  z-index: 1;
 }
 .h h5, .h p {
   position: absolute;
@@ -1207,9 +1270,10 @@ main {
   border-radius: 5px;
   box-shadow: 0 0px 20px rgba(255, 255, 255, 0.4);
   background: #fbfcee;
-  position: relative;
+  position: absolute;
   overflow: hidden;
-  transform: translate3d(0, 0, 0);
+  transition: all .5s ease-in;
+  z-index: 1;
 }
 
 .wave {
@@ -1297,104 +1361,303 @@ main {
 }
 
 
+/* --------------------------- slide5 --------------------------------- */
+.poster {
+  transform-origin: center center;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+.poster__content {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  padding: 2%;
+  background-color: #f5f5f5;
+  color: #151515;
+  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.2);
+  line-height: 1;
+  border-radius: 5px;
+  transition: all .5s ease-in;
+}
+
+.poster__body {
+  position: absolute;
+  top: 25%;
+  left: -20%;
+  width: 100%;
+  height: 100%;
+}
+
+.poster__body svg {
+  transform: scale(2);
+  overflow: hidden;
+}
+.poster__body svg g {
+  transform-origin: 50% 50% 0;
+}
+.poster__body svg g:nth-child(1) {
+  -webkit-animation: rotate 1.4285714286s linear infinite;
+          animation: rotate 1.4285714286s linear infinite;
+}
+.poster__body svg g:nth-child(2) {
+  -webkit-animation: rotate 2.1428571429s linear infinite;
+          animation: rotate 2.1428571429s linear infinite;
+}
+.poster__body svg g:nth-child(3) {
+  -webkit-animation: rotate 2.8571428571s linear infinite;
+          animation: rotate 2.8571428571s linear infinite;
+}
+.poster__body svg g:nth-child(4) {
+  -webkit-animation: rotate 3.5714285714s linear infinite;
+          animation: rotate 3.5714285714s linear infinite;
+}
+.poster__body svg g:nth-child(5) {
+  -webkit-animation: rotate 4.2857142857s linear infinite;
+          animation: rotate 4.2857142857s linear infinite;
+}
+.poster__body svg g:nth-child(6) {
+  -webkit-animation: rotate 5s linear infinite;
+          animation: rotate 5s linear infinite;
+}
+.poster__body svg g:nth-child(7) {
+  -webkit-animation: rotate 5.7142857143s linear infinite;
+          animation: rotate 5.7142857143s linear infinite;
+}
+
+.poster__body h5 {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -48%);
+  color: #000;
+  font-size: 32px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.poster__body p {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -54%);
+  color: #000;
+  font-size: 16px;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(360deg) translate3d(0, 0, 0);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(360deg) translate3d(0, 0, 0);
+  }
+}
+
 /* ------------------------------- next, prev btn ------------------------------- */
 .slide-control {
   position: absolute;
+  top: 0;
   width: 100%;
-  top: 50%;
-  transform: translate(0, -50%);
   color: #fff;
   font-size: 32px;
 }
 .slide-control .prev {
   position: absolute;
-  left: 2%;
+  left: 0;
+  width: 100px;
+  height: 100vh;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
 }
 .slide-control .next {
   position: absolute;
-  right: 2%;
+  right: 0;
+  width: 100px;
+  height: 100vh;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+}
+.slide-control .prev:hover, .slide-control .next:hover {background-color: rgba(0, 0, 0, 0.05);}
+
+.prev i, .next i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
+/* ----------------------- slide contents ------------------------- */
+.si-content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translate3d(0, 0, 0);
+  transition: all .5s ease-in;
+  width: 500px;
+  height: 500px;
+  color: #fff;
+  padding-left: 20px;
+  z-index: -1;
+}
+.si-title {
+  font-size: 32px;
+  margin-top: 38px;
+}
+.si-date {
+  font-size: 12px;
+  color: #bdbdbd;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 32px;
+}
+.si-txts-bx {
+  margin-top: 32px;
+}
+.si-txts-bx1 {
+  width: 30%;
+  float: left;
+}
+.si-txts-bx2 {
+  width: 70%;
+  float: left;
+}
+.si-txts-bx p {
+  padding: 0 0 12px 0;
+  font-size: 14px;
+}
+/* ----------------------- slide3 content ------------------------- */
+.slide-hover:hover .slide1 {
+  transform: translateX(-100%) perspective(600px) rotateY(10deg);
+}
+
+.slide-hover:hover .holder {
+  transform: translateX(-100%) perspective(600px) rotateY(10deg);
+}
+
+.slide-hover:hover .h {
+  transform: translateX(-100%) perspective(600px) rotateY(10deg);
+}
+
+.slide-hover:hover .box {
+  transform: translateX(-100%) perspective(600px) rotateY(10deg);
+}
+
+.slide-hover:hover .poster {
+  transform: translateX(-100%) perspective(600px) rotateY(10deg);
+}
+.slide-hover:hover .sic {
+  transform: translateX(0) translate3d(0, 0, 0);
+}
+
+/* ----------------------- bright ------------------------- */
+.bright {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  z-index: -5;
+}
+
+.bright::before,
+.bright::after {
+  position: absolute;
+  content: "";
+  top: -5%;
+  left: -5%;
+  height: 110%;
+  width: 110%;
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: blur(60px);
+}
+
+.bright::after {
+  background-color:#eeeeee;
+  animation : backglow2 15s ease infinite;
+}
+
+.bright::before {
+  background-color:#eeeeee;
+  animation : backglow1 15s ease infinite;
+}
+
+@keyframes backglow1 {
+  0% {
+    transform: translate(10%, 10%) scale(1);
+    opacity: 0.2;
+  }
+  25% {
+    transform: translate(-10%, 10%) scale(0.9);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(-10%, -10%) scale(1);
+    opacity: 0.15;
+  }
+  75% {
+    transform: translate(10%, -10%) scale(0.9);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(10%, 10%) scale(1);
+    opacity: 0.2;
+  }
+}
+
+@keyframes backglow2 {
+  0% {
+    transform: translate(-10%, -10%) scale(1);
+    opacity: 0.2;
+  }
+  25% {
+    transform: translate(10%, -10%) scale(0.9);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(10%, 10%) scale(1);
+    opacity: 0.15;
+  }
+  75% {
+    transform: translate(-10%, 10%) scale(1);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(-10%, -10%) scale(0.9);
+    opacity: 0.2;
+  }
+}
+
+@keyframes bright {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* ---------------------- MEDIA ------------------------ */
 @media (max-width: 1400px) {
-
-  /* ----- section3 ----- */
   .loading-title {
     font-size: 3.2vw;
-  }
-
-  .pos-1 {
-    grid-area: 10 / 1 / 30 / 6;
-  }
-  .pos-2 {
-    grid-area: 1 / 19 / 15 / 30;
-  }
-  .pos-3 {
-    grid-area: 1 / 35 / 12 / 42;
-  }
-  .pos-4 {
-    grid-area: 8 / 9 / 26 / 17;
-  }
-  .pos-5 {
-    grid-area: 20 / 33 / 35 / 45;
-  }
-  .pos-6 {
-    grid-area: 22 / 46 / 30 / 51;
-  }
-  .pos-7 {
-    grid-area: 43 / 1 / 50 / 9;
-  }
-  .pos-8 {
-    grid-area: 38 / 12 / 50 / 19;
-  }
-  .pos-9 {
-    grid-area: 40 / 22 / 50 / 30;
-  }
-  .pos-10 {
-    grid-area: 40 / 36 / 50 / 47;
   }
 
 }
 
 @media (max-width: 1200px) {
-
-  /* ----- section3 ----- */
   .loading-title {
     font-size: 3vw;
-  }
-
-  .pos-1 {
-    grid-area: 10 / 1 / 30 / 6;
-  }
-  .pos-2 {
-    grid-area: 1 / 20 / 13 / 30;
-  }
-  .pos-3 {
-    grid-area: 1 / 35 / 11 / 42;
-  }
-  .pos-4 {
-    grid-area: 9 / 9 / 26 / 17;
-  }
-  .pos-5 {
-    grid-area: 21 / 33 / 35 / 45;
-  }
-  .pos-6 {
-    grid-area: 21 / 47 / 28 / 51;
-  }
-  .pos-7 {
-    grid-area: 43 / 1 / 50 / 9;
-  }
-  .pos-8 {
-    grid-area: 38 / 12 / 50 / 19;
-  }
-  .pos-9 {
-    grid-area: 40 / 24 / 50 / 31;
-  }
-  .pos-10 {
-    grid-area: 39 / 38 / 47 / 47;
   }
 
 }
